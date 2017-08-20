@@ -1,20 +1,30 @@
 include Project.mk
 -include Common.mk
 
-.PHONY: all clean burn
+.PHONY: all
+all: ice40
 
-all: $(BUILD)/result.bin
+.PHONY: ice40
+ice40: $(BUILD)/ice40.bin
 
+$(BUILD)/ice40.blif: $(SOURCE)/$(TOP_MODULE) $(BUILD)/.depend Makefile
+	yosys -q -p "read_verilog -noautowire $(SOURCE)/$(TOP_MODULE)"  \
+	         -p "synth_ice40 -top top -blif $(BUILD)/ice40.blif"
+
+$(BUILD)/ice40.asc: $(BUILD)/ice40.blif $(SOURCE)/ice40_pinmap.pcf
+	arachne-pnr -d $(DEVICE) -P $(FOOTPRINT) -o $(BUILD)/ice40.asc  \
+	            -p $(SOURCE)/ice40_pinmap.pcf $(BUILD)/ice40.blif
+
+$(BUILD)/ice40.bin: $(BUILD)/ice40.asc
+	icepack $(BUILD)/ice40.asc $(BUILD)/ice40.bin
+
+.PHONY: burn
+burn: all
+	iceprog -S $(BUILD)/ice40.bin
+
+.PHONY: clean
 clean:
 	@rm -fr $(BUILD)
-
-burn: all
-	iceprog -S $(BUILD)/result.bin
-
-$(BUILD)/result.bin: $(MODULES) $(BUILD)/.depend Makefile
-	yosys -p "synth_ice40 -top top -blif $(BUILD)/result.blif" $(MODULES)
-	arachne-pnr -d $(DEVICE) -P $(FOOTPRINT) -o $(BUILD)/result.asc -p pinmap.pcf $(BUILD)/result.blif
-	icepack $(BUILD)/result.asc $(BUILD)/result.bin
 
 .PRECIOUS: $(BUILD)/.depend
 $(BUILD)/.depend:
