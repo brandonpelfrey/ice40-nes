@@ -1,9 +1,18 @@
-set_io --warn-no-port led1  B5
-set_io --warn-no-port led2  B4
-set_io --warn-no-port led3  A2
-set_io --warn-no-port led4  A1
-set_io --warn-no-port led5  C5
-set_io --warn-no-port led6  C4
-set_io --warn-no-port led7  B3
-set_io --warn-no-port led8  C3
-set_io --warn-no-port hwclk J3
+# VGA
+
+set_io --warn-no-port leds[0]  B5
+set_io --warn-no-port leds[1]  B4
+set_io --warn-no-port leds[2]  A2
+set_io --warn-no-port leds[3]  A1
+set_io --warn-no-port leds[4]  C5
+set_io --warn-no-port leds[5]  C4
+set_io --warn-no-port leds[6]  B3
+set_io --warn-no-port leds[7]  C3
+
+set_io --warn-no-port vga_r L16
+set_io --warn-no-port vga_g P15
+set_io --warn-no-port vga_b M15
+set_io --warn-no-port vga_hsync M16
+set_io --warn-no-port vga_vsync N16
+
+set_io --warn-no-port clk_in_12_mhz J3

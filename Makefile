@@ -7,8 +7,8 @@ all: ice40
 .PHONY: ice40
 ice40: $(BUILD)/ice40.bin
 
-$(BUILD)/ice40.blif: $(SOURCE)/$(TOP_MODULE) $(BUILD)/.depend Makefile
-	yosys -q -p "read_verilog -noautowire $(SOURCE)/$(TOP_MODULE)"  \
+$(BUILD)/ice40.blif: $(SOURCE)/*.v $(BUILD)/.depend Makefile
+	yosys -q -p "read_verilog -noautowire $(SOURCE)/*.v"  \
 	         -p "synth_ice40 -top top -blif $(BUILD)/ice40.blif"
 
 $(BUILD)/ice40.asc: $(BUILD)/ice40.blif $(SOURCE)/ice40_pinmap.pcf
