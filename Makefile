@@ -22,6 +22,10 @@ $(BUILD)/ice40.bin: $(BUILD)/ice40.asc
 burn: all
 	iceprog -S $(BUILD)/ice40.bin
 
+.PHONY: timing
+timing:
+	icetime -d hx8k -mit $(BUILD)/ice40.asc
+
 .PHONY: clean
 clean:
 	@rm -fr $(BUILD)
