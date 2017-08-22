@@ -1,6 +1,6 @@
 module mod_clock_master(
-  input clk_in_12_mhz,
-  output clk_out_25_175_mhz
+  input in_clk_12_mhz,
+  output out_clk_25_175_mhz
 );
 
 // VGA has a pixel clock which defines the time between 
@@ -18,8 +18,8 @@ SB_PLL40_CORE #(
   .DIVR(4'b0000),
   .FILTER_RANGE(3'b001)
 ) uut (
-  .REFERENCECLK(clk_in_12_mhz),
-  .PLLOUTCORE(clk_out_25_175_mhz),
+  .REFERENCECLK(in_clk_12_mhz),
+  .PLLOUTCORE(out_clk_25_175_mhz),
   .RESETB(1'b1),
   .BYPASS(1'b0)
 );

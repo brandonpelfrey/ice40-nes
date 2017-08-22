@@ -3,17 +3,17 @@
 // and desired colors are piped in from outside. Also output are the
 // necessary H-Sync and V-Sync signals.
 module mod_vga_encoder(
-  input clk_in_25_175_mhz,
-  input vga_in_r,
-  input vga_in_g,
-  input vga_in_b,
-  output vga_out_r,
-  output vga_out_g,
-  output vga_out_b,
-  output vga_out_hsync,
-  output vga_out_vsync,
-  output [9:0] vga_out_current_x,
-  output [9:0] vga_out_current_y
+  input in_clk_25_175_mhz,
+  input in_vga_r,
+  input in_vga_g,
+  input in_vga_b,
+  output out_vga_r,
+  output out_vga_g,
+  output out_vga_b,
+  output out_vga_hsync,
+  output out_vga_vsync,
+  output [9:0] out_vga_current_x,
+  output [9:0] out_vga_current_y
 );
 
 // Current position in the raster
@@ -41,15 +41,13 @@ parameter vbp    = 33;   // vertical back porch
 parameter hpixels = res_x + hfp + hpulse + hbp;
 parameter vlines  = res_y + vfp + vpulse + vbp;
 
-always @(posedge clk_in_25_175_mhz)
-begin
+always @(posedge in_clk_25_175_mhz) begin
   if (pix_x < hpixels - 1) begin
     pix_x <= pix_x + 1;
-  end
-  else
-  begin
+  end else begin
     // Next line
     pix_x <= 0;
+
     if (pix_y < vlines - 1) begin
       pix_y <= pix_y + 1;
     end else begin
@@ -61,22 +59,22 @@ end
 
 // In this video mode, hsync and vsync are active low when the pulse
 // is supposed to take place
-assign vga_out_hsync = (pix_x >= (res_x+hfp) && pix_x < (res_x+hfp+hpulse)) ? 0 : 1;
-assign vga_out_vsync = (pix_y >= (res_y+vfp) && pix_y < (res_y+vfp+vpulse)) ? 0 : 1;
+assign out_vga_hsync = (pix_x >= (res_x+hfp) && pix_x < (res_x+hfp+hpulse)) ? 0 : 1;
+assign out_vga_vsync = (pix_y >= (res_y+vfp) && pix_y < (res_y+vfp+vpulse)) ? 0 : 1;
 
-assign vga_out_current_x = pix_x;
-assign vga_out_current_y = pix_y;
+assign out_vga_current_x = pix_x;
+assign out_vga_current_y = pix_y;
 
 // Supress output in H-Blank and V-Blank
 always @* begin
   if (pix_y < res_y && pix_x < res_x) begin
-    vga_out_r <= vga_in_r;
-    vga_out_g <= vga_in_g;
-    vga_out_b <= vga_in_b;
+    out_vga_r <= in_vga_r;
+    out_vga_g <= in_vga_g;
+    out_vga_b <= in_vga_b;
   end else begin
-    vga_out_r <= 0;
-    vga_out_g <= 0;
-    vga_out_b <= 0;
+    out_vga_r <= 0;
+    out_vga_g <= 0;
+    out_vga_b <= 0;
   end
 end
 
