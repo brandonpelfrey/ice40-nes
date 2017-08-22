@@ -1,4 +1,3 @@
-
 // A very basic VGA encoder. Current position is given as an output
 // and desired colors are piped in from outside. Also output are the
 // necessary H-Sync and V-Sync signals.

@@ -4,16 +4,16 @@
 module mod_hex_display(
   input [9:0] in_pix_x, // Current pixel output position (x,y)
   input [9:0] in_pix_y,
-  input in_reset,
+  input       in_latch,
   input [7:0] in_data0, // Input data lines. These are written
   input [7:0] in_data1, // to internal registers.
-  input [7:0] in_data2, // TODO : Implement latching.
+  input [7:0] in_data2, // TODO Implement latching.
   input [7:0] in_data3,
   input [7:0] in_data4,
   input [7:0] in_data5,
   input [7:0] in_data6,
   input [7:0] in_data7,
-  output out_pixel     // Single high/low to be drawn for the current pixel
+  output out_pixel       // Single high/low to be drawn for the current pixel
 );
 
 // 8x8 font data for hex digits 0-F
@@ -40,28 +40,8 @@ end
 parameter N_NIBBLES = 16;
 reg[3:0] data[N_NIBBLES-1:0];
 
-reg pix_reg;
-always @* begin
-  // TODO : Reset-data logic
-
-  // TODO : This is delayed by one pixel clock cycle..
-
-  // Characters appear at the top of the screen (only top 8 pixels)
-  // Also, avoid repeating the data in the X direction.
-  if(in_pix_y[9:3] == 0 && in_pix_x[9:7] == 0) begin
-
-    // Get the nibble at this block in the x-direction, then get the
-    // appropriate font data. Need to Not the y to invert. TODO : Y-Flip the
-    // font data and remove the Not.
-    pix_reg <= font_data[ data[ in_pix_x[6:3] ] ]
-                        [ {~in_pix_y[2:0], in_pix_x[2:0]} ];
-  end else begin
-    pix_reg <= 0;
-  end
-
-  // clock in data to be shown.
-  // We should either latch this for a longer period, or just 
-  // directly wire this to out_pixel
+always @(posedge in_latch) begin
+  // Clock in data to be shown.
   data[0]  <= in_data0[7:4];
   data[1]  <= in_data0[3:0];
   data[2]  <= in_data1[7:4];
@@ -78,6 +58,23 @@ always @* begin
   data[13] <= in_data6[3:0];
   data[14] <= in_data7[7:4];
   data[15] <= in_data7[3:0];
+end
+
+reg pix_reg;
+always @* begin
+  // TODO : This is delayed by one pixel clock cycle..
+
+  // Characters appear 8 pixels from top of screen (to not be cut off)
+  // Also, avoid repeating the data in the X direction.
+  if(in_pix_y[9:4] == 0 && in_pix_y[3] == 1 && in_pix_x[9:7] == 0) begin
+    // Get the nibble at this block in the x-direction, then get the
+    // appropriate font data. Need to Not the y to invert. TODO : Y-Flip the
+    // font data and remove the Not.
+    pix_reg <= font_data[ data[ in_pix_x[6:3] ] ]
+                        [ {~in_pix_y[2:0], in_pix_x[2:0]} ];
+  end else begin
+    pix_reg <= 0;
+  end
 end
 
 assign out_pixel = pix_reg;

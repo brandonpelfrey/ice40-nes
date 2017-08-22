@@ -13,7 +13,7 @@ $(BUILD)/ice40.blif: $(SOURCE)/*.v $(BUILD)/.depend Makefile
 
 $(BUILD)/ice40.asc: $(BUILD)/ice40.blif $(SOURCE)/ice40_pinmap.pcf
 	arachne-pnr -d $(DEVICE) -P $(FOOTPRINT) -o $(BUILD)/ice40.asc  \
-	            -p $(SOURCE)/ice40_pinmap.pcf $(BUILD)/ice40.blif
+	             -p $(SOURCE)/ice40_pinmap.pcf $(BUILD)/ice40.blif
 
 $(BUILD)/ice40.bin: $(BUILD)/ice40.asc
 	icepack $(BUILD)/ice40.asc $(BUILD)/ice40.bin

@@ -1,4 +1,3 @@
-
 module top(
   input in_clk_12_mhz,
   output [7:0] out_leds,
@@ -21,7 +20,7 @@ wire w_hex_display_pixel_on;
 mod_hex_display hex_display(
   .in_pix_x( w_vga_pix_x ),
   .in_pix_y( w_vga_pix_y ),
-  .in_reset(),
+  .in_latch( out_vga_vsync ),
   .out_pixel( w_hex_display_pixel_on ),
   .in_data0( counter[63:56] ),
   .in_data1( counter[55:48] ),
