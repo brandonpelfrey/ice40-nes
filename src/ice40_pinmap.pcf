@@ -11,6 +11,11 @@ set_io --warn-no-port out_leds[7]  C3
 # Dev Board Clock
 set_io --warn-no-port in_clk_12_mhz J3
 
+# NES Controller
+set_io --warn-no-port out_controller0_pulse N3
+set_io --warn-no-port out_controller0_latch M2
+set_io --warn-no-port in_controller0_data   L3
+
 # VGA666
 set_io --warn-no-port out_vga_r L16
 set_io --warn-no-port out_vga_g P15

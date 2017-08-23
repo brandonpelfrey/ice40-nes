@@ -1,11 +1,18 @@
 module top(
   input in_clk_12_mhz,
   output [7:0] out_leds,
+
+  // VGA666
   output out_vga_r,
   output out_vga_g,
   output out_vga_b,
   output out_vga_hsync,
-  output out_vga_vsync
+  output out_vga_vsync,
+
+  // Controller 0
+  output out_controller0_pulse,
+  output out_controller0_latch,
+  input in_controller0_data
 );
 
 // Clock stuff
@@ -29,7 +36,7 @@ mod_hex_display hex_display(
   .in_data4( counter[31:24] ),
   .in_data5( counter[23:16] ),
   .in_data6( counter[15:8] ),
-  .in_data7( counter[7:0] )
+  .in_data7( controller0_buttons[7:0] )
 );
 
 // VGA Output
@@ -49,11 +56,22 @@ mod_vga_encoder vga_encoder(
   .out_vga_current_y( w_vga_pix_y )
 );
 
+wire [7:0] controller0_buttons;
+mod_controller controller0(
+  .in_clk_controller( counter[8] ),
+  .in_vsync( out_vga_vsync ),
+  .in_controller_data( in_controller0_data ),
+  .out_controller_latch( out_controller0_latch ),
+  .out_controller_pulse( out_controller0_pulse ),
+  .out_controller_buttons( controller0_buttons )
+);
+
 // Some internal state, used to update an on-screen counter
 reg [63:0] counter;
-assign out_leds[7:0] = counter[28:21]; // blinky blinky
-
-always @ (posedge in_clk_12_mhz) begin
+always @(posedge in_clk_12_mhz) begin
   counter <= counter + 1;
 end
+
+assign out_leds[7:0] = controller0_buttons[7:0];
+
 endmodule
