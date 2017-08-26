@@ -49,7 +49,7 @@ U 1 1 599E6178
 P 1450 1650
 F 0 "J2" H 1450 2700 50  0000 C CNN
 F 1 "CONN_02X20" V 1450 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 1450 700 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 1450 700 50  0001 C CNN
 F 3 "" H 1450 700 50  0001 C CNN
 	1    1450 1650
 	1    0    0    -1  
@@ -60,7 +60,7 @@ U 1 1 599E6357
 P 3350 1650
 F 0 "J1" H 3350 2700 50  0000 C CNN
 F 1 "CONN_02X20" V 3350 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x21_Pitch2.54mm" H 3350 700 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 3350 700 50  0001 C CNN
 F 3 "" H 3350 700 50  0001 C CNN
 	1    3350 1650
 	1    0    0    -1  
@@ -71,7 +71,7 @@ U 1 1 599E64A8
 P 5150 1650
 F 0 "J3" H 5150 2700 50  0000 C CNN
 F 1 "CONN_02X20" V 5150 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 5150 700 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 5150 700 50  0001 C CNN
 F 3 "" H 5150 700 50  0001 C CNN
 	1    5150 1650
 	1    0    0    -1  
@@ -82,7 +82,7 @@ U 1 1 599E64D9
 P 6900 1650
 F 0 "J4" H 6900 2700 50  0000 C CNN
 F 1 "CONN_02X20" V 6900 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 6900 700 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 6900 700 50  0001 C CNN
 F 3 "" H 6900 700 50  0001 C CNN
 	1    6900 1650
 	1    0    0    -1  
