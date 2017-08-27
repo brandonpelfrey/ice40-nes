@@ -24,10 +24,11 @@
       (path pcb 0  15240 -15240  15240 -91440  91440 -91440  91440 -15240
             15240 -15240  15240 -15240)
     )
-    (plane GNDA (polygon B.Cu 0  92075 -25400  58420 -25400  58420 -36830  31115 -36830
-            31115 -25400  14605 -25400  14605 -13970  92075 -13970))
-    (plane GND (polygon B.Cu 0  30480 -37465  59055 -37465  59055 -26035  92710 -26035
-            93345 -92710  14605 -92710  14605 -26035  30480 -26035))
+    (plane GNDA (polygon B.Cu 0  12700 -12700  93980 -12700  93980 -25400  68580 -25400
+            58420 -25400  58420 -30734  33020 -30734  33020 -25400  21590 -25400
+            12700 -25400))
+    (plane GND (polygon B.Cu 0  12700 -26670  31750 -26670  31750 -32004  59690 -32004
+            59690 -26670  69850 -26670  93980 -26670  93980 -92710  13970 -92710))
     (via "Via[0-1]_600:400_um")
     (rule
       (width 250)
@@ -38,7 +39,7 @@
   )
   (placement
     (component "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm"
-      (place QPI_FLASH1 45720 -43340 front 90 (PN S25FL128SAGMFBR00))
+      (place QPI_FLASH1 45720 -43340 back 90 (PN S25FL128SAGMFBR00))
     )
     (component "pcb:TSOPII-54_10.16x22.22mm-Pitch0.8mm"
       (place SDRAM1 53125 -63050 front 270 (PN "IS42S81600F-6TLI"))
@@ -53,32 +54,36 @@
       (place J4 88900 -27940 front 0 (PN CONN_02X20))
     )
     (component "Housings_SSOP:SSOP-16_4.4x5.2mm_Pitch0.65mm"
-      (place AUDIO_ENC1 65130 -41010 front 180 (PN UDA1334ATS))
+      (place AUDIO_ENC1 63860 -42175 back 0 (PN UDA1334ATS))
     )
     (component "pcb:SJ1-352XNG"
       (place J5 48895 -20320 front 0 (PN AUDIO_OUT_JACK))
     )
-    (component Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
-      (place R1 74295 -21590 front 0 (PN 1))
-      (place R2 33020 -17780 front 180 (PN 1))
-      (place R3 71755 -17780 front 180 (PN 220k))
-      (place R4 22860 -24130 front 0 (PN 220k))
-      (place R5 74295 -17780 front 0 (PN 100))
-      (place R6 33020 -20955 front 180 (PN 100))
-    )
-    (component Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm
-      (place C1 66675 -32305 front 90 (PN "100nF 63V"))
-      (place C3 35560 -19685 front 0 (PN "100nF 63V"))
-      (place C5 55880 -34845 front 90 (PN "100nF 63V"))
-      (place C9 58420 -22780 front 90 (PN 10nF))
-      (place C10 35560 -24765 front 0 (PN 10nF))
-    )
     (component Capacitors_THT:CP_Radial_D5.0mm_P2.50mm
-      (place C2 61595 -31710 front 90 (PN "47uF 16V"))
-      (place C4 43815 -32385 front 270 (PN "47uF 16V"))
-      (place C6 62270 -22860 front 0 (PN "47uF 16V"))
-      (place C7 37465 -28575 front 270 (PN "47uF 16V"))
-      (place C8 50800 -34885 front 90 (PN "47uF 16V"))
+      (place C2 64262 -32472 front 90 (PN "47uF 16V"))
+      (place C4 30266 -22352 front 0 (PN "47uF 16V"))
+      (place C6 64048 -19050 front 0 (PN "47uF 16V"))
+      (place C7 39624 -19304 front 180 (PN "47uF 16V"))
+      (place C8 38568 -27178 front 180 (PN "47uF 16V"))
+    )
+    (component Capacitors_SMD:C_0805_HandSoldering
+      (place C11 63500 -63247.1 back 90 (PN 100nF))
+      (place C12 57130 -63227.1 back 0 (PN 100nF))
+      (place C13 48768 -63226 back 270 (PN 100nF))
+      (place C1 70612 -31222 front 90 (PN "100nF 63V"))
+      (place C3 18562 -23368 front 180 (PN "100nF 63V"))
+      (place C5 37612 -23368 front 180 (PN "100nF 63V"))
+      (place C9 57150 -18522 front 90 (PN 10nF))
+      (place C10 29992 -17272 front 0 (PN 10nF))
+    )
+    (component Resistors_SMD:R_0805_HandSoldering
+      (place R7 70612 -26082 front 90 (PN 0))
+      (place R1 79676 -22352 front 0 (PN 1))
+      (place R2 18462 -19304 front 180 (PN 1))
+      (place R3 70358 -20240 front 270 (PN 220k))
+      (place R4 23796 -17272 front 180 (PN 220k))
+      (place R5 60118 -23622 front 0 (PN 100))
+      (place R6 23448 -21336 front 180 (PN 100))
     )
   )
   (library
@@ -391,44 +396,6 @@
       (pin Rect[A]Pad_1000x2000_um 2 -5000 -5500)
       (pin Rect[A]Pad_2000x1000_um 1 0 -500)
     )
-    (image Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
-      (outline (path signal 100  1930 1250  1930 -1250))
-      (outline (path signal 100  1930 -1250  8230 -1250))
-      (outline (path signal 100  8230 -1250  8230 1250))
-      (outline (path signal 100  8230 1250  1930 1250))
-      (outline (path signal 100  0 0  1930 0))
-      (outline (path signal 100  10160 0  8230 0))
-      (outline (path signal 120  1870 1310  1870 -1310))
-      (outline (path signal 120  1870 -1310  8290 -1310))
-      (outline (path signal 120  8290 -1310  8290 1310))
-      (outline (path signal 120  8290 1310  1870 1310))
-      (outline (path signal 120  980 0  1870 0))
-      (outline (path signal 120  9180 0  8290 0))
-      (outline (path signal 50  -1050 1600  -1050 -1600))
-      (outline (path signal 50  -1050 -1600  11250 -1600))
-      (outline (path signal 50  11250 -1600  11250 1600))
-      (outline (path signal 50  11250 1600  -1050 1600))
-      (pin Round[A]Pad_1600_um 1 0 0)
-      (pin Oval[A]Pad_1600x1600_um 2 10160 0)
-    )
-    (image Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm
-      (outline (path signal 100  350 950  350 -950))
-      (outline (path signal 100  350 -950  4650 -950))
-      (outline (path signal 100  4650 -950  4650 950))
-      (outline (path signal 100  4650 950  350 950))
-      (outline (path signal 120  290 1010  4710 1010))
-      (outline (path signal 120  290 -1010  4710 -1010))
-      (outline (path signal 120  290 1010  290 996))
-      (outline (path signal 120  290 -996  290 -1010))
-      (outline (path signal 120  4710 1010  4710 996))
-      (outline (path signal 120  4710 -996  4710 -1010))
-      (outline (path signal 50  -1050 1300  -1050 -1300))
-      (outline (path signal 50  -1050 -1300  6050 -1300))
-      (outline (path signal 50  6050 -1300  6050 1300))
-      (outline (path signal 50  6050 1300  -1050 1300))
-      (pin Round[A]Pad_1600_um 1 0 0)
-      (pin Round[A]Pad_1600_um 2 5000 0)
-    )
     (image Capacitors_THT:CP_Radial_D5.0mm_P2.50mm
       (outline (path signal 100  3750 0  3627.64 -772.542  3272.54 -1469.46  2719.46 -2022.54
             2022.54 -2377.64  1250 -2500  477.458 -2377.64  -219.463 -2022.54
@@ -560,14 +527,37 @@
       (pin Rect[A]Pad_1600x1600_um 1 0 0)
       (pin Round[A]Pad_1600_um 2 2500 0)
     )
+    (image Capacitors_SMD:C_0805_HandSoldering
+      (outline (path signal 100  -1000 -620  -1000 620))
+      (outline (path signal 100  1000 -620  -1000 -620))
+      (outline (path signal 100  1000 620  1000 -620))
+      (outline (path signal 100  -1000 620  1000 620))
+      (outline (path signal 120  500 850  -500 850))
+      (outline (path signal 120  -500 -850  500 -850))
+      (outline (path signal 50  -2250 880  2250 880))
+      (outline (path signal 50  -2250 880  -2250 -870))
+      (outline (path signal 50  2250 -870  2250 880))
+      (outline (path signal 50  2250 -870  -2250 -870))
+      (pin Rect[T]Pad_1500x1250_um 1 -1250 0)
+      (pin Rect[T]Pad_1500x1250_um 2 1250 0)
+    )
+    (image Resistors_SMD:R_0805_HandSoldering
+      (outline (path signal 100  -1000 -620  -1000 620))
+      (outline (path signal 100  1000 -620  -1000 -620))
+      (outline (path signal 100  1000 620  1000 -620))
+      (outline (path signal 100  -1000 620  1000 620))
+      (outline (path signal 120  600 -880  -600 -880))
+      (outline (path signal 120  -600 880  600 880))
+      (outline (path signal 50  -2350 900  2350 900))
+      (outline (path signal 50  -2350 900  -2350 -900))
+      (outline (path signal 50  2350 -900  2350 900))
+      (outline (path signal 50  2350 -900  -2350 -900))
+      (pin Rect[T]Pad_1500x1300_um 1 -1350 0)
+      (pin Rect[T]Pad_1500x1300_um 2 1350 0)
+    )
     (padstack Round[A]Pad_1600_um
       (shape (circle F.Cu 1600))
       (shape (circle B.Cu 1600))
-      (attach off)
-    )
-    (padstack Oval[A]Pad_1600x1600_um
-      (shape (path F.Cu 1600  0 0  0 0))
-      (shape (path B.Cu 1600  0 0  0 0))
       (attach off)
     )
     (padstack Oval[A]Pad_1700x1700_um
@@ -597,6 +587,14 @@
       (shape (rect F.Cu -750 -300 750 300))
       (attach off)
     )
+    (padstack Rect[T]Pad_1500x1250_um
+      (shape (rect F.Cu -750 -625 750 625))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x1300_um
+      (shape (rect F.Cu -750 -650 750 650))
+      (attach off)
+    )
     (padstack Rect[A]Pad_1600x1600_um
       (shape (rect F.Cu -800 -800 800 800))
       (shape (rect B.Cu -800 -800 800 800))
@@ -618,7 +616,7 @@
       (pins SDRAM1-16 J3-13)
     )
     (net "Net-(AUDIO_ENC1-Pad4)"
-      (pins AUDIO_ENC1-4 R1-1 C1-1 C2-1)
+      (pins AUDIO_ENC1-4 C2-1 C1-1 R1-1)
     )
     (net GND
       (pins QPI_FLASH1-10 SDRAM1-28 SDRAM1-6 SDRAM1-12 SDRAM1-41 SDRAM1-46 SDRAM1-52
@@ -626,7 +624,7 @@
         VGA666-39 J1-7 J1-8 J1-15 J1-16 J1-23 J1-24 J1-31 J1-32 J1-39 J1-40 J2-7 J2-8
         J2-15 J2-16 J2-23 J2-24 J2-31 J2-32 J2-39 J2-40 J3-7 J3-8 J3-15 J3-16 J3-23
         J3-24 J3-31 J3-32 J3-39 J3-40 J4-7 J4-8 J4-15 J4-16 J4-23 J4-24 J4-31 J4-32
-        J4-39 J4-40 AUDIO_ENC1-5 C1-2 C2-2)
+        J4-39 J4-40 AUDIO_ENC1-5 C2-2 C11-1 C12-1 C13-2 R7-1 C1-2)
     )
     (net M11
       (pins SDRAM1-18 J3-11)
@@ -638,10 +636,10 @@
       (pins SDRAM1-8 J3-17)
     )
     (net "Net-(AUDIO_ENC1-Pad12)"
-      (pins AUDIO_ENC1-12 C5-1 C8-1)
+      (pins AUDIO_ENC1-12 C8-1 C5-1)
     )
     (net "Net-(AUDIO_ENC1-Pad13)"
-      (pins AUDIO_ENC1-13 R2-1 C3-1 C4-1)
+      (pins AUDIO_ENC1-13 C4-1 C3-1 R2-1)
     )
     (net "Net-(AUDIO_ENC1-Pad14)"
       (pins AUDIO_ENC1-14 C7-1)
@@ -650,16 +648,16 @@
       (pins AUDIO_ENC1-16 C6-1)
     )
     (net "Net-(C6-Pad2)"
-      (pins R3-1 R5-2 C6-2)
+      (pins C6-2 R3-1 R5-2)
     )
     (net "Net-(C7-Pad2)"
-      (pins R4-1 R6-2 C7-2)
+      (pins C7-2 R4-1 R6-2)
     )
     (net "Net-(C9-Pad1)"
-      (pins J5-3 R5-1 C9-1)
+      (pins J5-3 C9-1 R5-1)
     )
     (net "Net-(C10-Pad1)"
-      (pins J5-2 R6-1 C10-1)
+      (pins J5-2 C10-1 R6-1)
     )
     (net B15
       (pins QPI_FLASH1-16 J1-3)
@@ -777,7 +775,7 @@
     )
     (net +3V3
       (pins QPI_FLASH1-2 SDRAM1-1 SDRAM1-3 SDRAM1-9 SDRAM1-14 SDRAM1-27 SDRAM1-43
-        SDRAM1-49 J4-2 J4-4 R1-2)
+        SDRAM1-49 J4-2 J4-4 C11-2 C12-2 C13-1 R1-2)
     )
     (net G1
       (pins VGA666-29 J4-27)
@@ -846,7 +844,7 @@
       (pins SDRAM1-53 J3-26)
     )
     (net GNDA
-      (pins AUDIO_ENC1-15 J5-1 R3-2 R4-2 C3-2 C4-2 C5-2 C8-2 C9-2 C10-2)
+      (pins AUDIO_ENC1-15 J5-1 C4-2 C8-2 R7-2 C3-2 C5-2 C9-2 C10-2 R3-2 R4-2)
     )
     (net A1
       (pins VGA666-7 J1-37)
