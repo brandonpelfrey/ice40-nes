@@ -713,7 +713,7 @@ F 3 "" H 1650 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1650 7500 1650 7350
+	1650 7350 1650 7500
 Wire Wire Line
 	1650 7450 2250 7450
 Wire Wire Line
@@ -1230,12 +1230,12 @@ Wire Wire Line
 $Comp
 L CONN_02X20 VGA666
 U 1 1 59A06853
-P 2200 9250
-F 0 "VGA666" H 2200 10300 50  0000 C CNN
-F 1 "CONN_02X20" V 2200 9250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 2200 8300 50  0001 C CNN
-F 3 "" H 2200 8300 50  0001 C CNN
-	1    2200 9250
+P 10000 6650
+F 0 "VGA666" H 10000 7700 50  0000 C CNN
+F 1 "CONN_02X20" V 10000 6650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 10000 5700 50  0001 C CNN
+F 3 "" H 10000 5700 50  0001 C CNN
+	1    10000 6650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1244,7 +1244,7 @@ U 1 1 59A0753E
 P 5250 8050
 F 0 "AUDIO_ENC1" H 5250 8800 60  0000 C CNN
 F 1 "UDA1334ATS" H 5250 8100 60  0000 C CNN
-F 2 "SMD_Packages:SSOP-20" H 5250 8050 60  0001 C CNN
+F 2 "Housings_SSOP:SSOP-16_4.4x5.2mm_Pitch0.65mm" H 5250 8050 60  0001 C CNN
 F 3 "" H 5250 8050 60  0001 C CNN
 	1    5250 8050
 	1    0    0    -1  
@@ -1255,7 +1255,7 @@ U 1 1 59A076F0
 P 6550 7450
 F 0 "C6" H 6575 7550 50  0000 L CNN
 F 1 "47uF 16V" H 6575 7350 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 6588 7300 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 6588 7300 50  0001 C CNN
 F 3 "" H 6550 7450 50  0001 C CNN
 	1    6550 7450
 	0    -1   -1   0   
@@ -1266,7 +1266,7 @@ U 1 1 59A077EA
 P 7050 7450
 F 0 "R5" V 7130 7450 50  0000 C CNN
 F 1 "100" V 7050 7450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0201" V 6980 7450 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6980 7450 50  0001 C CNN
 F 3 "" H 7050 7450 50  0001 C CNN
 	1    7050 7450
 	0    1    1    0   
@@ -1277,20 +1277,9 @@ U 1 1 59A0783F
 P 6800 7700
 F 0 "R3" V 6880 7700 50  0000 C CNN
 F 1 "220k" V 6800 7700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0201" V 6730 7700 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 7700 50  0001 C CNN
 F 3 "" H 6800 7700 50  0001 C CNN
 	1    6800 7700
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP C9
-U 1 1 59A0787C
-P 7300 7700
-F 0 "C9" H 7325 7800 50  0000 L CNN
-F 1 "10nF 63V" H 7325 7600 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 7338 7550 50  0001 C CNN
-F 3 "" H 7300 7700 50  0001 C CNN
-	1    7300 7700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1334,7 +1323,7 @@ U 1 1 59A08807
 P 6550 8200
 F 0 "C7" H 6575 8300 50  0000 L CNN
 F 1 "47uF 16V" H 6575 8100 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 6588 8050 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 6588 8050 50  0001 C CNN
 F 3 "" H 6550 8200 50  0001 C CNN
 	1    6550 8200
 	0    -1   -1   0   
@@ -1345,7 +1334,7 @@ U 1 1 59A0880D
 P 7050 8200
 F 0 "R6" V 7130 8200 50  0000 C CNN
 F 1 "100" V 7050 8200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0201" V 6980 8200 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6980 8200 50  0001 C CNN
 F 3 "" H 7050 8200 50  0001 C CNN
 	1    7050 8200
 	0    1    1    0   
@@ -1356,20 +1345,9 @@ U 1 1 59A08813
 P 6800 8450
 F 0 "R4" V 6880 8450 50  0000 C CNN
 F 1 "220k" V 6800 8450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0201" V 6730 8450 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 8450 50  0001 C CNN
 F 3 "" H 6800 8450 50  0001 C CNN
 	1    6800 8450
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP C10
-U 1 1 59A08819
-P 7300 8450
-F 0 "C10" H 7325 8550 50  0000 L CNN
-F 1 "10nF 63V" H 7325 8350 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 7338 8300 50  0001 C CNN
-F 3 "" H 7300 8450 50  0001 C CNN
-	1    7300 8450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1417,7 +1395,7 @@ U 1 1 59A090FD
 P 4900 9800
 F 0 "C2" H 4925 9900 50  0000 L CNN
 F 1 "47uF 16V" H 4925 9700 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 4938 9650 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 4938 9650 50  0001 C CNN
 F 3 "" H 4900 9800 50  0001 C CNN
 	1    4900 9800
 	0    1    1    0   
@@ -1428,7 +1406,7 @@ U 1 1 59A0922A
 P 4900 9250
 F 0 "C1" H 4925 9350 50  0000 L CNN
 F 1 "100nF 63V" H 4925 9150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0201" H 4938 9100 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 4938 9100 50  0001 C CNN
 F 3 "" H 4900 9250 50  0001 C CNN
 	1    4900 9250
 	0    1    1    0   
@@ -1440,22 +1418,11 @@ Wire Wire Line
 Wire Wire Line
 	5150 9800 5050 9800
 Wire Wire Line
-	4750 9800 4650 9800
+	4650 9800 4750 9800
 Wire Wire Line
 	4650 9050 4650 10150
 Wire Wire Line
 	4650 9250 4750 9250
-$Comp
-L GND #PWR051
-U 1 1 59A09849
-P 4650 10150
-F 0 "#PWR051" H 4650 9900 50  0001 C CNN
-F 1 "GND" H 4650 10000 50  0000 C CNN
-F 2 "" H 4650 10150 50  0001 C CNN
-F 3 "" H 4650 10150 50  0001 C CNN
-	1    4650 10150
-	1    0    0    -1  
-$EndComp
 Connection ~ 4650 9800
 $Comp
 L R R1
@@ -1463,21 +1430,21 @@ U 1 1 59A09A0C
 P 5150 10000
 F 0 "R1" V 5230 10000 50  0000 C CNN
 F 1 "1" V 5150 10000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0201" V 5080 10000 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 10000 50  0001 C CNN
 F 3 "" H 5150 10000 50  0001 C CNN
 	1    5150 10000
 	1    0    0    -1  
 $EndComp
 Connection ~ 5150 9800
 $Comp
-L +3.3V #PWR052
+L +3.3V #PWR051
 U 1 1 59A09CD5
-P 5150 10150
-F 0 "#PWR052" H 5150 10000 50  0001 C CNN
-F 1 "+3.3V" H 5150 10290 50  0000 C CNN
-F 2 "" H 5150 10150 50  0001 C CNN
-F 3 "" H 5150 10150 50  0001 C CNN
-	1    5150 10150
+P 5150 10200
+F 0 "#PWR051" H 5150 10050 50  0001 C CNN
+F 1 "+3.3V" H 5150 10340 50  0000 C CNN
+F 2 "" H 5150 10200 50  0001 C CNN
+F 3 "" H 5150 10200 50  0001 C CNN
+	1    5150 10200
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1486,7 +1453,7 @@ U 1 1 59A0A043
 P 5800 9800
 F 0 "C4" H 5825 9900 50  0000 L CNN
 F 1 "47uF 16V" H 5825 9700 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 5838 9650 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 5838 9650 50  0001 C CNN
 F 3 "" H 5800 9800 50  0001 C CNN
 	1    5800 9800
 	0    1    1    0   
@@ -1497,7 +1464,7 @@ U 1 1 59A0A049
 P 5800 9250
 F 0 "C3" H 5825 9350 50  0000 L CNN
 F 1 "100nF 63V" H 5825 9150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0201" H 5838 9100 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 5838 9100 50  0001 C CNN
 F 3 "" H 5800 9250 50  0001 C CNN
 	1    5800 9250
 	0    1    1    0   
@@ -1509,22 +1476,11 @@ Wire Wire Line
 Wire Wire Line
 	6050 9800 5950 9800
 Wire Wire Line
-	5650 9800 5550 9800
+	5550 9800 5650 9800
 Wire Wire Line
 	5550 9150 5550 10150
 Wire Wire Line
 	5550 9250 5650 9250
-$Comp
-L GND #PWR053
-U 1 1 59A0A055
-P 5550 10150
-F 0 "#PWR053" H 5550 9900 50  0001 C CNN
-F 1 "GND" H 5550 10000 50  0000 C CNN
-F 2 "" H 5550 10150 50  0001 C CNN
-F 3 "" H 5550 10150 50  0001 C CNN
-	1    5550 10150
-	1    0    0    -1  
-$EndComp
 Connection ~ 5550 9800
 $Comp
 L R R2
@@ -1532,21 +1488,21 @@ U 1 1 59A0A05C
 P 6050 10000
 F 0 "R2" V 6130 10000 50  0000 C CNN
 F 1 "1" V 6050 10000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0201" V 5980 10000 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 10000 50  0001 C CNN
 F 3 "" H 6050 10000 50  0001 C CNN
 	1    6050 10000
 	1    0    0    -1  
 $EndComp
 Connection ~ 6050 9800
 $Comp
-L +1V2 #PWR054
+L +1V2 #PWR052
 U 1 1 59A0A16B
-P 6050 10150
-F 0 "#PWR054" H 6050 10000 50  0001 C CNN
-F 1 "+1V2" H 6050 10290 50  0000 C CNN
-F 2 "" H 6050 10150 50  0001 C CNN
-F 3 "" H 6050 10150 50  0001 C CNN
-	1    6050 10150
+P 6050 10200
+F 0 "#PWR052" H 6050 10050 50  0001 C CNN
+F 1 "+1V2" H 6050 10340 50  0000 C CNN
+F 2 "" H 6050 10200 50  0001 C CNN
+F 3 "" H 6050 10200 50  0001 C CNN
+	1    6050 10200
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1573,7 +1529,7 @@ U 1 1 59A0A6E1
 P 6500 9100
 F 0 "C5" H 6525 9200 50  0000 L CNN
 F 1 "100nF 63V" H 6525 9000 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0201" H 6538 8950 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 6538 8950 50  0001 C CNN
 F 3 "" H 6500 9100 50  0001 C CNN
 	1    6500 9100
 	1    0    0    -1  
@@ -1584,7 +1540,7 @@ U 1 1 59A0A728
 P 7100 9100
 F 0 "C8" H 7125 9200 50  0000 L CNN
 F 1 "47uF 16V" H 7125 9000 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_3x5.3" H 7138 8950 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 7138 8950 50  0001 C CNN
 F 3 "" H 7100 9100 50  0001 C CNN
 	1    7100 9100
 	1    0    0    -1  
@@ -1596,161 +1552,113 @@ Wire Wire Line
 Connection ~ 6500 8950
 Wire Wire Line
 	6500 9250 6500 9350
-$Comp
-L GND #PWR055
-U 1 1 59A0AE70
-P 7100 9350
-F 0 "#PWR055" H 7100 9100 50  0001 C CNN
-F 1 "GND" H 7100 9200 50  0000 C CNN
-F 2 "" H 7100 9350 50  0001 C CNN
-F 3 "" H 7100 9350 50  0001 C CNN
-	1    7100 9350
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR056
-U 1 1 59A0B131
-P 6500 9350
-F 0 "#PWR056" H 6500 9100 50  0001 C CNN
-F 1 "GND" H 6500 9200 50  0000 C CNN
-F 2 "" H 6500 9350 50  0001 C CNN
-F 3 "" H 6500 9350 50  0001 C CNN
-	1    6500 9350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7100 9350 7100 9250
-$Comp
-L GND #PWR057
-U 1 1 59A0DA13
-P 8150 8450
-F 0 "#PWR057" H 8150 8200 50  0001 C CNN
-F 1 "GND" H 8150 8300 50  0000 C CNN
-F 2 "" H 8150 8450 50  0001 C CNN
-F 3 "" H 8150 8450 50  0001 C CNN
-	1    8150 8450
-	1    0    0    1   
-$EndComp
 Wire Wire Line
-	7200 7450 8550 7450
+	7200 7450 8350 7450
 Wire Wire Line
-	8550 7450 8550 8900
+	8350 7450 8350 9100
 Wire Wire Line
-	7200 8200 8350 8200
+	7200 8200 8450 8200
 Wire Wire Line
-	8350 8200 8350 8900
+	8450 8200 8450 9100
 Wire Wire Line
-	8150 8450 8150 8900
-$Comp
-L JACK_2P J5
-U 1 1 59A10CB2
-P 8350 9350
-F 0 "J5" H 8000 9150 50  0000 C CNN
-F 1 "JACK_2P" H 8200 9600 50  0000 C CNN
-F 2 "Connectors:BARREL_JACK" H 8350 9350 50  0001 C CNN
-F 3 "" H 8350 9350 50  0001 C CNN
-	1    8350 9350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8550 8900 8450 8900
-Wire Wire Line
-	8150 8900 8200 8900
-Text GLabel 1900 8400 0    49   Input ~ 0
+	8550 8450 8550 9100
+Text GLabel 9700 5800 0    49   Input ~ 0
 VGA_VSYNC
-Text GLabel 1900 8500 0    49   Input ~ 0
+Text GLabel 9700 5900 0    49   Input ~ 0
 VGA_HSYNC
-Text GLabel 2500 8600 2    49   Input ~ 0
+Text GLabel 10300 6000 2    49   Input ~ 0
 VGA_G6
-Text GLabel 2500 8700 2    49   Input ~ 0
+Text GLabel 10300 6100 2    49   Input ~ 0
 VGA_G7
-Text GLabel 2500 8800 2    49   Input ~ 0
+Text GLabel 10300 6200 2    49   Input ~ 0
 VGA_R4
-Text GLabel 2500 9500 2    49   Input ~ 0
+Text GLabel 10300 6900 2    49   Input ~ 0
 VGA_B5
-Text GLabel 2500 9400 2    49   Input ~ 0
+Text GLabel 10300 6800 2    49   Input ~ 0
 VGA_B6
-Text GLabel 2500 10200 2    49   Input ~ 0
+Text GLabel 10300 7600 2    49   Input ~ 0
 VGA_R7
-Text GLabel 2500 10100 2    49   Input ~ 0
+Text GLabel 10300 7500 2    49   Input ~ 0
 VGA_R6
-Text GLabel 2500 10000 2    49   Input ~ 0
+Text GLabel 10300 7400 2    49   Input ~ 0
 VGA_R2
-Text GLabel 2500 9800 2    49   Input ~ 0
+Text GLabel 10300 7200 2    49   Input ~ 0
 VGA_G4
-Text GLabel 1900 8600 0    49   Input ~ 0
+Text GLabel 9700 6000 0    49   Input ~ 0
 VGA_B2
-Text GLabel 1900 8800 0    49   Input ~ 0
+Text GLabel 9700 6200 0    49   Input ~ 0
 VGA_R3
-Text GLabel 1900 9400 0    49   Input ~ 0
+Text GLabel 9700 6800 0    49   Input ~ 0
 VGA_G3
-Text GLabel 1900 9300 0    49   Input ~ 0
+Text GLabel 9700 6700 0    49   Input ~ 0
 VGA_B7
-Text GLabel 1900 9200 0    49   Input ~ 0
+Text GLabel 9700 6600 0    49   Input ~ 0
 VGA_G2
-Text GLabel 1900 10000 0    49   Input ~ 0
+Text GLabel 9700 7400 0    49   Input ~ 0
 VGA_R5
-Text GLabel 1900 9900 0    49   Input ~ 0
+Text GLabel 9700 7300 0    49   Input ~ 0
 VGA_G5
-Text GLabel 1900 9800 0    49   Input ~ 0
+Text GLabel 9700 7200 0    49   Input ~ 0
 VGA_B4
-Text GLabel 1900 9700 0    49   Input ~ 0
+Text GLabel 9700 7100 0    49   Input ~ 0
 VGA_B3
-Text GLabel 1900 8700 0    49   Input ~ 0
+Text GLabel 9700 6100 0    49   Input ~ 0
 GND
-Text GLabel 1900 9500 0    49   Input ~ 0
+Text GLabel 9700 6900 0    49   Input ~ 0
 GND
-Text GLabel 1900 10200 0    49   Input ~ 0
+Text GLabel 9700 7600 0    49   Input ~ 0
 GND
-Text GLabel 2500 9900 2    49   Input ~ 0
+Text GLabel 10300 7300 2    49   Input ~ 0
 GND
-Text GLabel 2500 9700 2    49   Input ~ 0
+Text GLabel 10300 7100 2    49   Input ~ 0
 GND
-Text GLabel 2500 9200 2    49   Input ~ 0
+Text GLabel 10300 6600 2    49   Input ~ 0
 GND
-Text GLabel 2500 8900 2    49   Input ~ 0
+Text GLabel 10300 6300 2    49   Input ~ 0
 GND
-Text GLabel 2500 8500 2    49   Input ~ 0
+Text GLabel 10300 5900 2    49   Input ~ 0
 GND
-Text GLabel 8350 5100 2    49   Input ~ 0
+Text GLabel 6600 4800 2    49   Input ~ 0
 VGA_VSYNC
-Text GLabel 8350 5000 2    49   Input ~ 0
+Text GLabel 6600 4900 2    49   Input ~ 0
 VGA_HSYNC
 Text GLabel 9200 5100 2    49   Input ~ 0
 VGA_B2
-Text GLabel 11650 5100 2    49   Input ~ 0
+Text GLabel 7350 4900 2    49   Input ~ 0
 VGA_R3
-Text GLabel 11650 5000 2    49   Input ~ 0
-VGA_G3
-Text GLabel 6600 4600 2    49   Input ~ 0
-VGA_B7
-Text GLabel 6600 4700 2    49   Input ~ 0
-VGA_G2
-Text GLabel 7350 5000 2    49   Input ~ 0
-VGA_R5
-Text GLabel 7350 5100 2    49   Input ~ 0
-VGA_G5
-Text GLabel 12450 4900 2    49   Input ~ 0
-VGA_B4
-Text GLabel 12450 4800 2    49   Input ~ 0
-VGA_B3
-Text GLabel 13350 4900 2    49   Input ~ 0
-VGA_G6
-Text GLabel 13350 5000 2    49   Input ~ 0
-VGA_G7
 Text GLabel 13350 5100 2    49   Input ~ 0
+VGA_G3
+Text GLabel 9200 5000 2    49   Input ~ 0
+VGA_B7
+Text GLabel 8350 5100 2    49   Input ~ 0
+VGA_G2
+Text GLabel 13350 4900 2    49   Input ~ 0
+VGA_R5
+Text GLabel 13350 5000 2    49   Input ~ 0
+VGA_G5
+Text GLabel 13350 4800 2    49   Input ~ 0
+VGA_B4
+Text GLabel 13350 4700 2    49   Input ~ 0
+VGA_B3
+Text GLabel 7350 5000 2    49   Input ~ 0
+VGA_G6
+Text GLabel 7350 5100 2    49   Input ~ 0
+VGA_G7
+Text GLabel 8350 5000 2    49   Input ~ 0
 VGA_R4
 Text GLabel 10700 5100 2    49   Input ~ 0
 VGA_B5
 Text GLabel 10700 5000 2    49   Input ~ 0
 VGA_B6
-Text GLabel 9200 5000 2    49   Input ~ 0
+Text GLabel 12450 4900 2    49   Input ~ 0
 VGA_R7
-Text GLabel 6600 4500 2    49   Input ~ 0
+Text GLabel 12450 4800 2    49   Input ~ 0
 VGA_R6
-Text GLabel 6600 4900 2    49   Input ~ 0
+Text GLabel 11650 5100 2    49   Input ~ 0
 VGA_R2
-Text GLabel 6600 4800 2    49   Input ~ 0
+Text GLabel 11650 5000 2    49   Input ~ 0
 VGA_G4
 Text GLabel 1100 5100 0    49   Input ~ 0
 SDRAM_A1
@@ -2082,35 +1990,33 @@ Text GLabel 13300 5100 0    49   Input ~ 0
 B2
 Text Notes 12250 3600 0    60   ~ 0
 J4\n
-Text GLabel 8350 4300 2    49   Input ~ 0
-SDRAM_A0
-Text GLabel 9200 4300 2    49   Input ~ 0
-SDRAM_A1
-Text GLabel 8350 4400 2    49   Input ~ 0
-SDRAM_A2
-Text GLabel 9200 4400 2    49   Input ~ 0
-SDRAM_A3
-Text GLabel 8350 4500 2    49   Input ~ 0
-SDRAM_A4
-Text GLabel 9200 4500 2    49   Input ~ 0
-SDRAM_A5
 Text GLabel 8350 4600 2    49   Input ~ 0
+SDRAM_A0
+Text GLabel 7350 4300 2    49   Input ~ 0
+SDRAM_A2
+Text GLabel 7350 4400 2    49   Input ~ 0
+SDRAM_A3
+Text GLabel 6600 4500 2    49   Input ~ 0
+SDRAM_A4
+Text GLabel 6600 4600 2    49   Input ~ 0
+SDRAM_A5
+Text GLabel 7350 4600 2    49   Input ~ 0
 SDRAM_A6
-Text GLabel 9200 4600 2    49   Input ~ 0
+Text GLabel 7350 4700 2    49   Input ~ 0
 SDRAM_A7
 Text GLabel 8350 4700 2    49   Input ~ 0
 SDRAM_A8
 Text GLabel 9200 4700 2    49   Input ~ 0
 SDRAM_A9
-Text GLabel 9200 4200 2    49   Input ~ 0
+Text GLabel 8350 4500 2    49   Input ~ 0
 SDRAM_A10
 Text GLabel 8350 4800 2    49   Input ~ 0
 SDRAM_A11
-Text GLabel 9200 4100 2    49   Input ~ 0
+Text GLabel 9200 4400 2    49   Input ~ 0
 SDRAM_BANK0
 Text GLabel 10700 4800 2    49   Input ~ 0
 SDRAM_DM
-Text GLabel 8350 4200 2    49   Input ~ 0
+Text GLabel 9200 4500 2    49   Input ~ 0
 SDRAM_BANK1
 Text GLabel 11650 4800 2    49   Input ~ 0
 SDRAM_CLK
@@ -2140,41 +2046,41 @@ Text GLabel 10700 4400 2    49   Input ~ 0
 SDRAM_D1
 Text GLabel 11650 4400 2    49   Input ~ 0
 SDRAM_D0
-Text GLabel 9200 3900 2    49   Input ~ 0
+Text GLabel 9200 4000 2    49   Input ~ 0
 QPI_RESET
-Text GLabel 9200 3800 2    49   Input ~ 0
+Text GLabel 9200 3900 2    49   Input ~ 0
 QPI_RFU
-Text GLabel 9200 3700 2    49   Input ~ 0
+Text GLabel 9200 3800 2    49   Input ~ 0
 QPI_SCK
-Text GLabel 8350 3800 2    49   Input ~ 0
+Text GLabel 8350 4000 2    49   Input ~ 0
 QPI_VIO
-Text GLabel 8350 3700 2    49   Input ~ 0
+Text GLabel 8350 3900 2    49   Input ~ 0
 QPI_CS
-Text GLabel 6600 3700 2    49   Input ~ 0
-QPI_IO0
-Text GLabel 6600 3800 2    49   Input ~ 0
-QPI_IO1
 Text GLabel 6600 3900 2    49   Input ~ 0
-QPI_IO2
+QPI_IO0
 Text GLabel 6600 4000 2    49   Input ~ 0
+QPI_IO1
+Text GLabel 7350 3900 2    49   Input ~ 0
+QPI_IO2
+Text GLabel 7350 4000 2    49   Input ~ 0
 QPI_IO3
-Text GLabel 12450 4200 2    49   Input ~ 0
+Text GLabel 11650 3900 2    49   Input ~ 0
 DAC_BCK
-Text GLabel 12450 4100 2    49   Input ~ 0
+Text GLabel 11650 3800 2    49   Input ~ 0
 DAC_WS
-Text GLabel 12450 4000 2    49   Input ~ 0
+Text GLabel 11650 3700 2    49   Input ~ 0
 DAC_PLL0
 Text GLabel 12450 3900 2    49   Input ~ 0
 DAC_SYSCLK
-Text GLabel 12450 3800 2    49   Input ~ 0
+Text GLabel 10700 3800 2    49   Input ~ 0
 DAC_DATAI
-Text GLabel 12450 4500 2    49   Input ~ 0
+Text GLabel 12450 3800 2    49   Input ~ 0
 DAC_SFOR0
-Text GLabel 12450 4400 2    49   Input ~ 0
+Text GLabel 10700 3900 2    49   Input ~ 0
 DAC_SFOR1
-Text GLabel 12450 4300 2    49   Input ~ 0
-DAC_MUTE
 Text GLabel 12450 3700 2    49   Input ~ 0
+DAC_MUTE
+Text GLabel 10700 3700 2    49   Input ~ 0
 DAC_CLKOUT
 Wire Wire Line
 	1100 5000 1150 5000
@@ -2405,61 +2311,61 @@ Wire Wire Line
 Wire Wire Line
 	13300 5100 13350 5100
 Wire Wire Line
-	1900 8400 1950 8400
+	9700 5800 9750 5800
 Wire Wire Line
-	1950 8500 1900 8500
+	9750 5900 9700 5900
 Wire Wire Line
-	1900 8600 1950 8600
+	9700 6000 9750 6000
 Wire Wire Line
-	1950 8700 1900 8700
+	9750 6100 9700 6100
 Wire Wire Line
-	1900 8800 1950 8800
+	9700 6200 9750 6200
 Wire Wire Line
-	1950 9200 1900 9200
+	9750 6600 9700 6600
 Wire Wire Line
-	1900 9300 1950 9300
+	9700 6700 9750 6700
 Wire Wire Line
-	1950 9400 1900 9400
+	9750 6800 9700 6800
 Wire Wire Line
-	1900 9500 1950 9500
+	9700 6900 9750 6900
 Wire Wire Line
-	1950 9700 1900 9700
+	9750 7100 9700 7100
 Wire Wire Line
-	1900 9800 1950 9800
+	9700 7200 9750 7200
 Wire Wire Line
-	1950 9900 1900 9900
+	9750 7300 9700 7300
 Wire Wire Line
-	1900 10000 1950 10000
+	9700 7400 9750 7400
 Wire Wire Line
-	1950 10200 1900 10200
+	9750 7600 9700 7600
 Wire Wire Line
-	2450 10200 2500 10200
+	10250 7600 10300 7600
 Wire Wire Line
-	2500 10100 2450 10100
+	10300 7500 10250 7500
 Wire Wire Line
-	2450 10000 2500 10000
+	10250 7400 10300 7400
 Wire Wire Line
-	2500 9900 2450 9900
+	10300 7300 10250 7300
 Wire Wire Line
-	2450 9800 2500 9800
+	10250 7200 10300 7200
 Wire Wire Line
-	2500 9700 2450 9700
+	10300 7100 10250 7100
 Wire Wire Line
-	2450 9500 2500 9500
+	10250 6900 10300 6900
 Wire Wire Line
-	2500 9400 2450 9400
+	10300 6800 10250 6800
 Wire Wire Line
-	2450 9200 2500 9200
+	10250 6600 10300 6600
 Wire Wire Line
-	2500 8900 2450 8900
+	10300 6300 10250 6300
 Wire Wire Line
-	2450 8800 2500 8800
+	10250 6200 10300 6200
 Wire Wire Line
-	2500 8700 2450 8700
+	10300 6100 10250 6100
 Wire Wire Line
-	2450 8600 2500 8600
+	10250 6000 10300 6000
 Wire Wire Line
-	2500 8500 2450 8500
+	10300 5900 10250 5900
 Wire Wire Line
 	10650 4900 10700 4900
 Wire Wire Line
@@ -2558,4 +2464,139 @@ Wire Wire Line
 	7350 4500 7300 4500
 Wire Wire Line
 	7350 4600 7300 4600
+$Comp
+L CONN_01X05 J5
+U 1 1 59A509DB
+P 8350 9300
+F 0 "J5" H 8350 9600 50  0000 C CNN
+F 1 "AUDIO_OUT_JACK" V 8450 9300 50  0000 C CNN
+F 2 "pcb:SJ1-352XNG" H 8350 9300 50  0001 C CNN
+F 3 "" H 8350 9300 50  0001 C CNN
+	1    8350 9300
+	0    1    1    0   
+$EndComp
+$Comp
+L C C9
+U 1 1 59A542ED
+P 7300 7700
+F 0 "C9" H 7325 7800 50  0000 L CNN
+F 1 "10nF" H 7325 7600 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 7338 7550 50  0001 C CNN
+F 3 "" H 7300 7700 50  0001 C CNN
+	1    7300 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C10
+U 1 1 59A54475
+P 7300 8450
+F 0 "C10" H 7325 8550 50  0000 L CNN
+F 1 "10nF" H 7325 8350 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 7338 8300 50  0001 C CNN
+F 3 "" H 7300 8450 50  0001 C CNN
+	1    7300 8450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 10150 6050 10200
+Wire Wire Line
+	5150 10150 5150 10200
+Text GLabel 9200 4600 2    49   Input ~ 0
+SDRAM_A1
+$Comp
+L GNDA #PWR053
+U 1 1 59A5A27F
+P 4650 10150
+F 0 "#PWR053" H 4650 9900 50  0001 C CNN
+F 1 "GNDA" H 4650 10000 50  0000 C CNN
+F 2 "" H 4650 10150 50  0001 C CNN
+F 3 "" H 4650 10150 50  0001 C CNN
+	1    4650 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR054
+U 1 1 59A5A3F1
+P 5550 10150
+F 0 "#PWR054" H 5550 9900 50  0001 C CNN
+F 1 "GNDA" H 5550 10000 50  0000 C CNN
+F 2 "" H 5550 10150 50  0001 C CNN
+F 3 "" H 5550 10150 50  0001 C CNN
+	1    5550 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR055
+U 1 1 59A5A447
+P 6500 9350
+F 0 "#PWR055" H 6500 9100 50  0001 C CNN
+F 1 "GNDA" H 6500 9200 50  0000 C CNN
+F 2 "" H 6500 9350 50  0001 C CNN
+F 3 "" H 6500 9350 50  0001 C CNN
+	1    6500 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR056
+U 1 1 59A5A49D
+P 7100 9350
+F 0 "#PWR056" H 7100 9100 50  0001 C CNN
+F 1 "GNDA" H 7100 9200 50  0000 C CNN
+F 2 "" H 7100 9350 50  0001 C CNN
+F 3 "" H 7100 9350 50  0001 C CNN
+	1    7100 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR057
+U 1 1 59A5A4F3
+P 8550 8450
+F 0 "#PWR057" H 8550 8200 50  0001 C CNN
+F 1 "GNDA" H 8550 8300 50  0000 C CNN
+F 2 "" H 8550 8450 50  0001 C CNN
+F 3 "" H 8550 8450 50  0001 C CNN
+	1    8550 8450
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDA #PWR058
+U 1 1 59A5B04F
+P 1700 9450
+F 0 "#PWR058" H 1700 9200 50  0001 C CNN
+F 1 "GNDA" H 1700 9300 50  0000 C CNN
+F 2 "" H 1700 9450 50  0001 C CNN
+F 3 "" H 1700 9450 50  0001 C CNN
+	1    1700 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR059
+U 1 1 59A5B0A5
+P 2200 9450
+F 0 "#PWR059" H 2200 9200 50  0001 C CNN
+F 1 "GND" H 2200 9300 50  0000 C CNN
+F 2 "" H 2200 9450 50  0001 C CNN
+F 3 "" H 2200 9450 50  0001 C CNN
+	1    2200 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 59A5B0E4
+P 1900 9350
+F 0 "R7" V 1980 9350 50  0000 C CNN
+F 1 "0" V 1900 9350 50  0000 C CNN
+F 2 "" V 1830 9350 50  0001 C CNN
+F 3 "" H 1900 9350 50  0001 C CNN
+	1    1900 9350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 9350 2200 9350
+Wire Wire Line
+	2200 9350 2200 9450
+Wire Wire Line
+	1700 9350 1750 9350
+Wire Wire Line
+	1700 9350 1700 9450
 $EndSCHEMATC
