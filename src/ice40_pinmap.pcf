@@ -22,3 +22,5 @@ set_io --warn-no-port out_vga_g P15
 set_io --warn-no-port out_vga_b M15
 set_io --warn-no-port out_vga_hsync M16
 set_io --warn-no-port out_vga_vsync N16
+#set_io --warn-no-port out_vga_hsync C16
+#set_io --warn-no-port out_vga_vsync B16
