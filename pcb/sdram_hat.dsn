@@ -1,4 +1,4 @@
-(pcb /home/ccorsi/Programs/Ice40/pcb/sdram_hat.dsn
+(pcb "C:\projects\ice40-nes\pcb\sdram_hat.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -34,38 +34,38 @@
   )
   (placement
     (component "SMD_Packages:SSOP-20"
-      (place AUDIO_ENC1 59055 -73660 front 90 (PN UDA1334ATS))
+      (place AUDIO_ENC1 66675 -22225 front 0 (PN UDA1334ATS))
     )
     (component Capacitors_SMD:C_0201
-      (place C1 70485 -58420 front 0 (PN "100nF 63V"))
-      (place C3 70485 -66040 front 0 (PN "100nF 63V"))
-      (place C5 70485 -63500 front 0 (PN "100nF 63V"))
+      (place C1 74930 -17145 front 90 (PN "100nF 63V"))
+      (place C3 28575 -19685 front 90 (PN "100nF 63V"))
+      (place C5 73025 -17145 front 90 (PN "100nF 63V"))
     )
     (component Capacitors_SMD:CP_Elec_3x5.3
-      (place C2 59055 -57785 front 90 (PN "47uF 16V"))
-      (place C4 65405 -64135 front 90 (PN "47uF 16V"))
-      (place C6 64770 -37465 front 0 (PN "47uF 16V"))
-      (place C7 71755 -37465 front 180 (PN "47uF 16V"))
-      (place C8 52705 -57785 front 90 (PN "47uF 16V"))
-      (place C9 64770 -31115 front 180 (PN "10nF 63V"))
-      (place C10 71755 -31115 front 0 (PN "10nF 63V"))
+      (place C2 32385 -19685 front 90 (PN "47uF 16V"))
+      (place C4 24765 -19685 front 90 (PN "47uF 16V"))
+      (place C6 50800 -37465 front 0 (PN "47uF 16V"))
+      (place C7 57785 -37465 front 180 (PN "47uF 16V"))
+      (place C8 38100 -19685 front 90 (PN "47uF 16V"))
+      (place C9 50800 -31115 front 180 (PN "10nF 63V"))
+      (place C10 57785 -31115 front 0 (PN "10nF 63V"))
     )
     (component Connectors:BARREL_JACK
-      (place J5 69850 -25400 front 270 (PN JACK_2P))
+      (place J5 52705 -25400 front 270 (PN JACK_2P))
     )
     (component "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm"
-      (place QPI_FLASH1 40640 -34290 front 0 (PN S25FL128SAGMFBR00))
+      (place QPI_FLASH1 40005 -31115 front 270 (PN S25FL128SAGMFBR00))
     )
     (component Resistors_SMD:R_0201
-      (place R1 70485 -55880 front 0 (PN 1))
-      (place R2 70485 -60960 front 0 (PN 1))
-      (place R3 66040 -41910 front 270 (PN 220k))
-      (place R4 70485 -41910 front 270 (PN 220k))
-      (place R5 66675 -34290 front 270 (PN 100))
-      (place R6 69850 -34290 front 270 (PN 100))
+      (place R1 76835 -17145 front 90 (PN 1))
+      (place R2 20320 -20955 front 90 (PN 1))
+      (place R3 52070 -41910 front 270 (PN 220k))
+      (place R4 56515 -41910 front 270 (PN 220k))
+      (place R5 52705 -34290 front 270 (PN 100))
+      (place R6 55880 -34290 front 270 (PN 100))
     )
     (component "pcb:TSOPII-54_10.16x22.22mm-Pitch0.8mm"
-      (place SDRAM1 40640 -64770 front 0 (PN "IS42S81600F-6TLI"))
+      (place SDRAM1 53340 -55245 front 270 (PN "IS42S81600F-6TLI"))
     )
     (component Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm
       (place VGA666 30480 -88900 front 90 (PN CONN_02X20))
@@ -459,13 +459,13 @@
   )
   (network
     (net T16
-      (pins AUDIO_ENC1-1 J3-4)
+      (pins J3-3)
     )
     (net T14
-      (pins AUDIO_ENC1-2 J3-6)
+      (pins J3-5)
     )
     (net P10
-      (pins AUDIO_ENC1-3 J3-14)
+      (pins SDRAM1-16 J3-13)
     )
     (net "Net-(AUDIO_ENC1-Pad4)"
       (pins AUDIO_ENC1-4 C1-1 C2-1 R1-1)
@@ -473,28 +473,26 @@
     (net GND
       (pins AUDIO_ENC1-5 AUDIO_ENC1-15 C1-2 C2-2 C3-2 C4-2 C5-2 C8-2 C9-2 C10-2 J5-3
         QPI_FLASH1-10 R3-2 R4-2 SDRAM1-28 SDRAM1-6 SDRAM1-12 SDRAM1-41 SDRAM1-46 SDRAM1-52
-        SDRAM1-54 J1-7 J1-8 J1-15 J1-16 J1-23 J1-24 J1-31 J1-32 J1-39 J1-40 J2-7 J2-8
+        SDRAM1-54 VGA666-6 VGA666-9 VGA666-14 VGA666-20 VGA666-25 VGA666-30 VGA666-34
+        VGA666-39 J1-7 J1-8 J1-15 J1-16 J1-23 J1-24 J1-31 J1-32 J1-39 J1-40 J2-7 J2-8
         J2-15 J2-16 J2-23 J2-24 J2-31 J2-32 J2-39 J2-40 J3-7 J3-8 J3-15 J3-16 J3-23
         J3-24 J3-31 J3-32 J3-39 J3-40 J4-7 J4-8 J4-15 J4-16 J4-23 J4-24 J4-31 J4-32
         J4-39 J4-40)
     )
     (net M11
-      (pins AUDIO_ENC1-6 J3-12)
+      (pins SDRAM1-18 J3-11)
     )
     (net P9
-      (pins AUDIO_ENC1-7 J3-20)
+      (pins SDRAM1-2 J3-19)
     )
     (net R9
-      (pins AUDIO_ENC1-8 J3-22)
-    )
-    (net T8
-      (pins AUDIO_ENC1-9 J3-26)
+      (pins J3-21)
     )
     (net P13
-      (pins AUDIO_ENC1-10 J3-10)
+      (pins J3-9)
     )
     (net R10
-      (pins AUDIO_ENC1-11 J3-18)
+      (pins SDRAM1-8 J3-17)
     )
     (net "Net-(AUDIO_ENC1-Pad12)"
       (pins AUDIO_ENC1-12 C5-1 C8-1)
@@ -521,332 +519,290 @@
       (pins C10-1 J5-2 R6-1)
     )
     (net A16
-      (pins SDRAM1-39 J1-1)
+      (pins QPI_FLASH1-7 J1-2)
     )
     (net IO0
-      (pins J1-2)
+      (pins QPI_FLASH1-16 J1-1)
     )
     (net A15
-      (pins SDRAM1-20 J1-3)
+      (pins QPI_FLASH1-14 J1-4)
     )
     (net B15
-      (pins J1-4)
+      (pins QPI_FLASH1-6 J1-3)
     )
     (net B13
-      (pins SDRAM1-21 J1-5)
-    )
-    (net B14
       (pins J1-6)
     )
-    (net B12
-      (pins J1-9)
+    (net B14
+      (pins QPI_FLASH1-3 J1-5)
     )
-    (net B11
+    (net B12
       (pins J1-10)
     )
-    (net A11
-      (pins J1-11)
+    (net B11
+      (pins J1-9)
     )
-    (net B10
+    (net A11
       (pins J1-12)
     )
+    (net B10
+      (pins SDRAM1-20 J1-11)
+    )
     (net A10
-      (pins J1-13)
+      (pins SDRAM1-21 J1-14)
     )
     (net C9
-      (pins J1-14)
+      (pins SDRAM1-22 J1-13)
     )
     (net A9
-      (pins J1-17)
+      (pins SDRAM1-23 J1-18)
     )
     (net B9
-      (pins J1-18)
+      (pins SDRAM1-24 J1-17)
     )
     (net B8
-      (pins J1-19)
+      (pins SDRAM1-25 J1-20)
     )
     (net A7
-      (pins J1-20)
+      (pins SDRAM1-26 J1-19)
     )
     (net B7
-      (pins J1-21)
+      (pins SDRAM1-29 J1-22)
     )
     (net C7
-      (pins J1-22)
+      (pins SDRAM1-30 J1-21)
     )
     (net A6
-      (pins J1-25)
+      (pins SDRAM1-31 J1-26)
     )
     (net C6
-      (pins J1-26)
+      (pins SDRAM1-32 J1-25)
     )
     (net B6
-      (pins J1-27)
+      (pins SDRAM1-33 J1-28)
     )
     (net C5
-      (pins J1-28)
+      (pins SDRAM1-34 J1-27)
     )
     (net A5
-      (pins J1-29)
+      (pins SDRAM1-35 J1-30)
     )
     (net C4
-      (pins J1-30)
+      (pins SDRAM1-37 J1-29)
     )
     (net B5
-      (pins J1-33)
-    )
-    (net C3
       (pins J1-34)
     )
+    (net C3
+      (pins J1-33)
+    )
     (net B4
-      (pins J1-35)
+      (pins VGA666-5 J1-36)
     )
     (net B3
-      (pins J1-36)
+      (pins VGA666-40 J1-35)
     )
     (net A2
-      (pins J1-37)
+      (pins VGA666-3 J1-38)
     )
     (net A1
-      (pins J1-38)
+      (pins VGA666-7 J1-37)
     )
     (net +1V2
-      (pins R2-2 J2-1 J2-3)
+      (pins R2-2 J2-2 J2-4)
     )
     (net IO1
-      (pins J2-2)
+      (pins J2-1)
     )
     (net R15
-      (pins SDRAM1-38 J2-4)
+      (pins J2-3)
     )
     (net P16
-      (pins SDRAM1-23 J2-5)
+      (pins QPI_FLASH1-15 J2-6)
     )
     (net P15
-      (pins SDRAM1-37 J2-6)
+      (pins J2-5)
     )
     (net N16
-      (pins SDRAM1-24 J2-9)
+      (pins QPI_FLASH1-8 J2-10)
     )
     (net M15
-      (pins SDRAM1-18 J2-10)
+      (pins J2-9)
     )
     (net M16
-      (pins SDRAM1-25 J2-11)
+      (pins QPI_FLASH1-9 J2-12)
     )
     (net L16
-      (pins SDRAM1-17 J2-12)
+      (pins J2-11)
     )
     (net K15
-      (pins SDRAM1-26 J2-13)
+      (pins QPI_FLASH1-1 J2-14)
     )
     (net K16
-      (pins SDRAM1-16 J2-14)
+      (pins J2-13)
     )
     (net K14
-      (pins SDRAM1-29 J2-17)
+      (pins J2-18)
     )
     (net J14
-      (pins SDRAM1-19 J2-18)
+      (pins J2-17)
     )
     (net G14
-      (pins SDRAM1-30 J2-19)
+      (pins J2-20)
     )
     (net F14
-      (pins SDRAM1-2 J2-20)
+      (pins J2-19)
     )
     (net J15
-      (pins SDRAM1-31 J2-21)
+      (pins J2-22)
     )
     (net H14
-      (pins SDRAM1-5 J2-22)
+      (pins J2-21)
     )
     (net H16
-      (pins SDRAM1-32 J2-25)
+      (pins J2-26)
     )
     (net G15
-      (pins SDRAM1-8 J2-26)
+      (pins J2-25)
     )
     (net G16
-      (pins SDRAM1-33 J2-27)
+      (pins VGA666-38 J2-28)
     )
     (net F15
-      (pins SDRAM1-11 J2-28)
+      (pins J2-27)
     )
     (net F16
-      (pins SDRAM1-34 J2-29)
+      (pins VGA666-21 J2-30)
     )
     (net E14
-      (pins SDRAM1-44 J2-30)
+      (pins J2-29)
     )
     (net E16
-      (pins SDRAM1-22 J2-33)
+      (pins VGA666-19 J2-34)
     )
     (net D15
-      (pins SDRAM1-47 J2-34)
+      (pins J2-33)
     )
     (net D16
-      (pins SDRAM1-35 J2-35)
+      (pins VGA666-32 J2-36)
     )
     (net D14
-      (pins SDRAM1-50 J2-36)
+      (pins VGA666-35 J2-35)
     )
     (net C16
-      (pins J2-37)
+      (pins VGA666-36 J2-38)
     )
     (net B16
-      (pins SDRAM1-53 J2-38)
+      (pins VGA666-33 J2-37)
     )
     (net R16
-      (pins QPI_FLASH1-3 J3-1)
-    )
-    (net IO2
       (pins J3-2)
     )
+    (net IO2
+      (pins J3-1)
+    )
     (net T15
-      (pins QPI_FLASH1-6 J3-3)
+      (pins J3-4)
     )
     (net T13
-      (pins QPI_FLASH1-16 J3-5)
+      (pins J3-6)
     )
     (net N12
-      (pins QPI_FLASH1-14 J3-9)
+      (pins J3-10)
     )
     (net N10
-      (pins QPI_FLASH1-7 J3-11)
-    )
-    (net T11
-      (pins QPI_FLASH1-15 J3-13)
-    )
-    (net T10
-      (pins QPI_FLASH1-8 J3-17)
+      (pins SDRAM1-19 J3-12)
     )
     (net P8
-      (pins QPI_FLASH1-9 J3-19)
+      (pins SDRAM1-5 J3-20)
     )
     (net T9
-      (pins QPI_FLASH1-1 J3-21)
-    )
-    (net T7
-      (pins J3-25)
-    )
-    (net T6
-      (pins J3-27)
+      (pins J3-22)
     )
     (net R6
-      (pins J3-28)
-    )
-    (net T5
-      (pins J3-29)
+      (pins SDRAM1-44 J3-27)
     )
     (net R5
-      (pins J3-30)
+      (pins SDRAM1-38 J3-29)
     )
     (net R3
-      (pins J3-33)
-    )
-    (net R4
       (pins J3-34)
     )
+    (net R4
+      (pins J3-33)
+    )
     (net R2
-      (pins J3-35)
+      (pins VGA666-24 J3-36)
     )
     (net T3
-      (pins J3-36)
+      (pins VGA666-23 J3-35)
     )
     (net T1
-      (pins J3-37)
+      (pins VGA666-26 J3-38)
     )
     (net T2
-      (pins J3-38)
+      (pins VGA666-11 J3-37)
     )
     (net +3V3
       (pins QPI_FLASH1-2 R1-2 SDRAM1-1 SDRAM1-3 SDRAM1-9 SDRAM1-14 SDRAM1-27 SDRAM1-43
-        SDRAM1-49 J4-1 J4-3)
+        SDRAM1-49 J4-2 J4-4)
     )
     (net IO3
-      (pins J4-2)
+      (pins J4-1)
     )
     (net R1
-      (pins J4-4)
-    )
-    (net P1
-      (pins J4-5)
+      (pins J4-3)
     )
     (net P2
-      (pins J4-6)
-    )
-    (net N3
-      (pins J4-9)
+      (pins J4-5)
     )
     (net N2
-      (pins J4-10)
-    )
-    (net M2
-      (pins J4-11)
+      (pins J4-9)
     )
     (net M1
-      (pins J4-12)
-    )
-    (net L3
-      (pins J4-13)
+      (pins J4-11)
     )
     (net L1
-      (pins J4-14)
-    )
-    (net K3
-      (pins J4-17)
+      (pins J4-13)
     )
     (net K1
-      (pins J4-18)
-    )
-    (net J2
-      (pins J4-19)
+      (pins J4-17)
     )
     (net J1
-      (pins J4-20)
-    )
-    (net H2
-      (pins J4-21)
+      (pins J4-19)
     )
     (net J3
-      (pins J4-22)
-    )
-    (net G2
-      (pins J4-25)
+      (pins J4-21)
     )
     (net H1
-      (pins J4-26)
-    )
-    (net F2
-      (pins J4-27)
+      (pins J4-25)
     )
     (net G1
-      (pins J4-28)
+      (pins J4-27)
     )
     (net E2
-      (pins J4-29)
-    )
-    (net F1
       (pins J4-30)
     )
-    (net D1
-      (pins J4-33)
+    (net F1
+      (pins J4-29)
     )
-    (net D2
+    (net D1
       (pins J4-34)
     )
+    (net D2
+      (pins VGA666-8 J4-33)
+    )
     (net C1
-      (pins J4-35)
+      (pins VGA666-29 J4-36)
     )
     (net C2
-      (pins J4-36)
+      (pins VGA666-10 J4-35)
     )
     (net B1
-      (pins J4-37)
+      (pins VGA666-31 J4-38)
     )
     (net B2
-      (pins J4-38)
+      (pins VGA666-12 J4-37)
     )
     (net "Net-(VGA666-Pad1)"
       (pins VGA666-1)
@@ -854,41 +810,11 @@
     (net "Net-(VGA666-Pad2)"
       (pins VGA666-2)
     )
-    (net "Net-(VGA666-Pad3)"
-      (pins VGA666-3)
-    )
     (net "Net-(VGA666-Pad4)"
       (pins VGA666-4)
     )
-    (net "Net-(VGA666-Pad5)"
-      (pins VGA666-5)
-    )
-    (net "Net-(VGA666-Pad6)"
-      (pins VGA666-6)
-    )
-    (net "Net-(VGA666-Pad7)"
-      (pins VGA666-7)
-    )
-    (net "Net-(VGA666-Pad8)"
-      (pins VGA666-8)
-    )
-    (net "Net-(VGA666-Pad9)"
-      (pins VGA666-9)
-    )
-    (net "Net-(VGA666-Pad10)"
-      (pins VGA666-10)
-    )
-    (net "Net-(VGA666-Pad11)"
-      (pins VGA666-11)
-    )
-    (net "Net-(VGA666-Pad12)"
-      (pins VGA666-12)
-    )
     (net "Net-(VGA666-Pad13)"
       (pins VGA666-13)
-    )
-    (net "Net-(VGA666-Pad14)"
-      (pins VGA666-14)
     )
     (net "Net-(VGA666-Pad15)"
       (pins VGA666-15)
@@ -902,29 +828,8 @@
     (net "Net-(VGA666-Pad18)"
       (pins VGA666-18)
     )
-    (net "Net-(VGA666-Pad19)"
-      (pins VGA666-19)
-    )
-    (net "Net-(VGA666-Pad20)"
-      (pins VGA666-20)
-    )
-    (net "Net-(VGA666-Pad21)"
-      (pins VGA666-21)
-    )
     (net "Net-(VGA666-Pad22)"
       (pins VGA666-22)
-    )
-    (net "Net-(VGA666-Pad23)"
-      (pins VGA666-23)
-    )
-    (net "Net-(VGA666-Pad24)"
-      (pins VGA666-24)
-    )
-    (net "Net-(VGA666-Pad25)"
-      (pins VGA666-25)
-    )
-    (net "Net-(VGA666-Pad26)"
-      (pins VGA666-26)
     )
     (net "Net-(VGA666-Pad27)"
       (pins VGA666-27)
@@ -932,61 +837,81 @@
     (net "Net-(VGA666-Pad28)"
       (pins VGA666-28)
     )
-    (net "Net-(VGA666-Pad29)"
-      (pins VGA666-29)
-    )
-    (net "Net-(VGA666-Pad30)"
-      (pins VGA666-30)
-    )
-    (net "Net-(VGA666-Pad31)"
-      (pins VGA666-31)
-    )
-    (net "Net-(VGA666-Pad32)"
-      (pins VGA666-32)
-    )
-    (net "Net-(VGA666-Pad33)"
-      (pins VGA666-33)
-    )
-    (net "Net-(VGA666-Pad34)"
-      (pins VGA666-34)
-    )
-    (net "Net-(VGA666-Pad35)"
-      (pins VGA666-35)
-    )
-    (net "Net-(VGA666-Pad36)"
-      (pins VGA666-36)
-    )
     (net "Net-(VGA666-Pad37)"
       (pins VGA666-37)
     )
-    (net "Net-(VGA666-Pad38)"
-      (pins VGA666-38)
+    (net DAC_BCK
+      (pins AUDIO_ENC1-1 J4-20)
     )
-    (net "Net-(VGA666-Pad39)"
-      (pins VGA666-39)
+    (net DAC_WS
+      (pins AUDIO_ENC1-2 J4-18)
     )
-    (net "Net-(VGA666-Pad40)"
-      (pins VGA666-40)
+    (net DAC_DATAI
+      (pins AUDIO_ENC1-3 J4-10)
+    )
+    (net DAC_SYSCLK
+      (pins AUDIO_ENC1-6 J4-12)
+    )
+    (net DAC_SFOR1
+      (pins AUDIO_ENC1-7 J4-26)
+    )
+    (net DAC_MUTE
+      (pins AUDIO_ENC1-8 J4-22)
+    )
+    (net DAC_CLKOUT
+      (pins AUDIO_ENC1-9 J4-6)
+    )
+    (net DAC_PLL0
+      (pins AUDIO_ENC1-10 J4-14)
+    )
+    (net DAC_SFOR0
+      (pins AUDIO_ENC1-11 J4-28)
+    )
+    (net SDRAM_D3
+      (pins SDRAM1-11 J3-18)
+    )
+    (net SDRAM_CAS
+      (pins SDRAM1-17 J3-14)
+    )
+    (net SDRAM_DM
+      (pins SDRAM1-39 J3-30)
+    )
+    (net SDRAM_D5
+      (pins SDRAM1-47 J3-28)
+    )
+    (net SDRAM_D6
+      (pins SDRAM1-50 J3-25)
+    )
+    (net SDRAM_D7
+      (pins SDRAM1-53 J3-26)
     )
     (class kicad_default "" +1V2 +3V3 A1 A10 A11 A15 A16 A2 A5 A6 A7 A9 B1
       B10 B11 B12 B13 B14 B15 B16 B2 B3 B4 B5 B6 B7 B8 B9 C1 C16 C2 C3 C4
-      C5 C6 C7 C9 D1 D14 D15 D16 D2 E14 E16 E2 F1 F14 F15 F16 F2 G1 G14 G15
-      G16 G2 GND H1 H14 H16 H2 IO0 IO1 IO2 IO3 J1 J14 J15 J2 J3 K1 K14 K15
-      K16 K3 L1 L16 L3 M1 M11 M15 M16 M2 N10 N12 N16 N2 N3 "Net-(AUDIO_ENC1-Pad12)"
-      "Net-(AUDIO_ENC1-Pad13)" "Net-(AUDIO_ENC1-Pad14)" "Net-(AUDIO_ENC1-Pad16)"
-      "Net-(AUDIO_ENC1-Pad4)" "Net-(C10-Pad1)" "Net-(C6-Pad2)" "Net-(C7-Pad2)"
-      "Net-(C9-Pad1)" "Net-(VGA666-Pad1)" "Net-(VGA666-Pad10)" "Net-(VGA666-Pad11)"
-      "Net-(VGA666-Pad12)" "Net-(VGA666-Pad13)" "Net-(VGA666-Pad14)" "Net-(VGA666-Pad15)"
-      "Net-(VGA666-Pad16)" "Net-(VGA666-Pad17)" "Net-(VGA666-Pad18)" "Net-(VGA666-Pad19)"
-      "Net-(VGA666-Pad2)" "Net-(VGA666-Pad20)" "Net-(VGA666-Pad21)" "Net-(VGA666-Pad22)"
-      "Net-(VGA666-Pad23)" "Net-(VGA666-Pad24)" "Net-(VGA666-Pad25)" "Net-(VGA666-Pad26)"
-      "Net-(VGA666-Pad27)" "Net-(VGA666-Pad28)" "Net-(VGA666-Pad29)" "Net-(VGA666-Pad3)"
-      "Net-(VGA666-Pad30)" "Net-(VGA666-Pad31)" "Net-(VGA666-Pad32)" "Net-(VGA666-Pad33)"
-      "Net-(VGA666-Pad34)" "Net-(VGA666-Pad35)" "Net-(VGA666-Pad36)" "Net-(VGA666-Pad37)"
-      "Net-(VGA666-Pad38)" "Net-(VGA666-Pad39)" "Net-(VGA666-Pad4)" "Net-(VGA666-Pad40)"
-      "Net-(VGA666-Pad5)" "Net-(VGA666-Pad6)" "Net-(VGA666-Pad7)" "Net-(VGA666-Pad8)"
-      "Net-(VGA666-Pad9)" P1 P10 P13 P15 P16 P2 P8 P9 R1 R10 R15 R16 R2 R3
-      R4 R5 R6 R9 T1 T10 T11 T13 T14 T15 T16 T2 T3 T5 T6 T7 T8 T9
+      C5 C6 C7 C9 D1 D14 D15 D16 D2 DAC_BCK DAC_CLKOUT DAC_DATAI DAC_MUTE
+      DAC_PLL0 DAC_SFOR0 DAC_SFOR1 DAC_SYSCLK DAC_WS E14 E16 E2 F1 F14 F15
+      F16 F2 G1 G14 G15 G16 G2 GND H1 H14 H16 H2 IO0 IO1 IO2 IO3 J1 J14 J15
+      J2 J3 K1 K14 K15 K16 K3 L1 L16 L3 M1 M11 M15 M16 M2 N10 N12 N16 N2 N3
+      "Net-(AUDIO_ENC1-Pad12)" "Net-(AUDIO_ENC1-Pad13)" "Net-(AUDIO_ENC1-Pad14)"
+      "Net-(AUDIO_ENC1-Pad16)" "Net-(AUDIO_ENC1-Pad4)" "Net-(C10-Pad1)" "Net-(C6-Pad2)"
+      "Net-(C7-Pad2)" "Net-(C9-Pad1)" "Net-(VGA666-Pad1)" "Net-(VGA666-Pad10)"
+      "Net-(VGA666-Pad11)" "Net-(VGA666-Pad12)" "Net-(VGA666-Pad13)" "Net-(VGA666-Pad14)"
+      "Net-(VGA666-Pad15)" "Net-(VGA666-Pad16)" "Net-(VGA666-Pad17)" "Net-(VGA666-Pad18)"
+      "Net-(VGA666-Pad19)" "Net-(VGA666-Pad2)" "Net-(VGA666-Pad20)" "Net-(VGA666-Pad21)"
+      "Net-(VGA666-Pad22)" "Net-(VGA666-Pad23)" "Net-(VGA666-Pad24)" "Net-(VGA666-Pad25)"
+      "Net-(VGA666-Pad26)" "Net-(VGA666-Pad27)" "Net-(VGA666-Pad28)" "Net-(VGA666-Pad29)"
+      "Net-(VGA666-Pad3)" "Net-(VGA666-Pad30)" "Net-(VGA666-Pad31)" "Net-(VGA666-Pad32)"
+      "Net-(VGA666-Pad33)" "Net-(VGA666-Pad34)" "Net-(VGA666-Pad35)" "Net-(VGA666-Pad36)"
+      "Net-(VGA666-Pad37)" "Net-(VGA666-Pad38)" "Net-(VGA666-Pad39)" "Net-(VGA666-Pad4)"
+      "Net-(VGA666-Pad40)" "Net-(VGA666-Pad5)" "Net-(VGA666-Pad6)" "Net-(VGA666-Pad7)"
+      "Net-(VGA666-Pad8)" "Net-(VGA666-Pad9)" P1 P10 P13 P15 P16 P2 P8 P9
+      QPI_CS QPI_IO0 QPI_IO1 QPI_IO2 QPI_IO3 QPI_RESET QPI_RFU QPI_SCK QPI_VIO
+      R1 R10 R15 R16 R2 R3 R4 R5 R6 R9 SDRAM_A0 SDRAM_A1 SDRAM_A10 SDRAM_A11
+      SDRAM_A2 SDRAM_A3 SDRAM_A4 SDRAM_A5 SDRAM_A6 SDRAM_A7 SDRAM_A8 SDRAM_A9
+      SDRAM_BANK0 SDRAM_BANK1 SDRAM_CAS SDRAM_CKE SDRAM_CLK SDRAM_CS SDRAM_D0
+      SDRAM_D1 SDRAM_D2 SDRAM_D3 SDRAM_D4 SDRAM_D5 SDRAM_D6 SDRAM_D7 SDRAM_DM
+      SDRAM_RAS SDRAM_WE T1 T10 T11 T13 T14 T15 T16 T2 T3 T5 T6 T7 T8 T9 VGA_B2
+      VGA_B3 VGA_B4 VGA_B5 VGA_B6 VGA_B7 VGA_G2 VGA_G3 VGA_G4 VGA_G5 VGA_G6
+      VGA_G7 VGA_HSYNC VGA_R2 VGA_R3 VGA_R4 VGA_R5 VGA_R6 VGA_R7 VGA_VSYNC
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
