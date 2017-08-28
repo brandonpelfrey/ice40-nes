@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/ccorsi/Programs/Ice40/pcb/sdram_hat.sch)
-    (date "Sun 27 Aug 2017 10:48:05 PM EDT")
+    (date "Mon 28 Aug 2017 01:28:54 AM EDT")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -47,7 +47,7 @@
       (tstamp 599F6BC9))
     (comp (ref QPI_FLASH1)
       (value S25FL128SAGMFBR00)
-      (footprint pcb:SOIC-16_3.9x9.9mm_Pitch1.27mm_ExtendedPad)
+      (footprint pcb:SOIC-16_7.5x9.9mm_Pitch1.27mm_ExtendedPad)
       (libsource (lib sdram_hat-cache) (part S25FL128SAGMFBR00))
       (sheetpath (names /) (tstamps /))
       (tstamp 59A03ADD))
@@ -416,12 +416,12 @@
         (pin (num 15) (name VSSA) (type BiDi))
         (pin (num 16) (name VOUTR) (type BiDi)))))
   (libraries
+    (library (logical sdram_hat-cache)
+      (uri /home/ccorsi/Programs/Ice40/pcb/sdram_hat-cache.lib))
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib))
     (library (logical device)
-      (uri /usr/share/kicad/library/device.lib))
-    (library (logical sdram_hat-cache)
-      (uri /home/ccorsi/Programs/Ice40/pcb/sdram_hat-cache.lib)))
+      (uri /usr/share/kicad/library/device.lib)))
   (nets
     (net (code 1) (name IO0)
       (node (ref J1) (pin 1)))
