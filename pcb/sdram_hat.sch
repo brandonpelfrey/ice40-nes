@@ -225,7 +225,7 @@ U 1 1 599F6BC9
 P 1950 6050
 F 0 "SDRAM1" H 1350 7250 50  0000 C CNN
 F 1 "IS42S81600F-6TLI" H 2650 4850 50  0000 C CNN
-F 2 "pcb:TSOPII-54_10.16x22.22mm-Pitch0.8mm" H 1950 6050 50  0001 C CIN
+F 2 "pcb:TSOPII-54_10.16x22.22mm_Pitch0.8mm_ExtendedPad" H 1950 6050 50  0001 C CIN
 F 3 "" H 1950 5800 50  0001 C CNN
 	1    1950 6050
 	1    0    0    -1  
@@ -1130,7 +1130,7 @@ U 1 1 59A03ADD
 P 4650 5600
 F 0 "QPI_FLASH1" H 4650 6350 60  0000 C CNN
 F 1 "S25FL128SAGMFBR00" V 4650 5600 60  0000 C CNN
-F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 4650 4850 60  0001 C CNN
+F 2 "pcb:SOIC-16_3.9x9.9mm_Pitch1.27mm_ExtendedPad" H 4650 4850 60  0001 C CNN
 F 3 "" H 4650 4850 60  0001 C CNN
 	1    4650 5600
 	1    0    0    -1  
@@ -1176,7 +1176,7 @@ U 1 1 59A0753E
 P 5250 8050
 F 0 "AUDIO_ENC1" H 5250 8800 60  0000 C CNN
 F 1 "UDA1334ATS" H 5250 8100 60  0000 C CNN
-F 2 "Housings_SSOP:SSOP-16_4.4x5.2mm_Pitch0.65mm" H 5250 8050 60  0001 C CNN
+F 2 "pcb:SSOP-16_4.4x5.2mm_Pitch0.65mm_ExtendedPad" H 5250 8050 60  0001 C CNN
 F 3 "" H 5250 8050 60  0001 C CNN
 	1    5250 8050
 	1    0    0    -1  
@@ -1510,7 +1510,7 @@ Text GLabel 10300 5900 2    49   Input ~ 0
 GND
 Text GLabel 6600 4800 2    49   Input ~ 0
 VGA_VSYNC
-Text GLabel 6600 4900 2    49   Input ~ 0
+Text GLabel 7350 5100 2    49   Input ~ 0
 VGA_HSYNC
 Text GLabel 9200 5100 2    49   Input ~ 0
 VGA_B2
@@ -1532,7 +1532,7 @@ Text GLabel 13350 4700 2    49   Input ~ 0
 VGA_B3
 Text GLabel 7350 5000 2    49   Input ~ 0
 VGA_G6
-Text GLabel 7350 5100 2    49   Input ~ 0
+Text GLabel 6600 4900 2    49   Input ~ 0
 VGA_G7
 Text GLabel 8350 5000 2    49   Input ~ 0
 VGA_R4
@@ -1938,7 +1938,7 @@ Text GLabel 9200 4000 2    49   Input ~ 0
 QPI_RESET
 Text GLabel 9200 3900 2    49   Input ~ 0
 QPI_RFU
-Text GLabel 9200 3800 2    49   Input ~ 0
+Text GLabel 6600 4000 2    49   Input ~ 0
 QPI_SCK
 Text GLabel 8350 4000 2    49   Input ~ 0
 QPI_VIO
@@ -1946,7 +1946,7 @@ Text GLabel 8350 3900 2    49   Input ~ 0
 QPI_CS
 Text GLabel 6600 3900 2    49   Input ~ 0
 QPI_IO0
-Text GLabel 6600 4000 2    49   Input ~ 0
+Text GLabel 8350 3700 2    49   Input ~ 0
 QPI_IO1
 Text GLabel 7350 3900 2    49   Input ~ 0
 QPI_IO2
