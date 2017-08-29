@@ -1884,9 +1884,9 @@ Text GLabel 7350 4300 2    49   Input ~ 0
 SDRAM_A2
 Text GLabel 7350 4400 2    49   Input ~ 0
 SDRAM_A3
-Text GLabel 6600 4500 2    49   Input ~ 0
+Text GLabel 8350 4800 2    49   Input ~ 0
 SDRAM_A4
-Text GLabel 6600 4600 2    49   Input ~ 0
+Text GLabel 9200 4800 2    49   Input ~ 0
 SDRAM_A5
 Text GLabel 7350 4600 2    49   Input ~ 0
 SDRAM_A6
@@ -1898,7 +1898,7 @@ Text GLabel 9200 4700 2    49   Input ~ 0
 SDRAM_A9
 Text GLabel 8350 4500 2    49   Input ~ 0
 SDRAM_A10
-Text GLabel 8350 4800 2    49   Input ~ 0
+Text GLabel 9200 4900 2    49   Input ~ 0
 SDRAM_A11
 Text GLabel 9200 4400 2    49   Input ~ 0
 SDRAM_BANK0
@@ -1908,7 +1908,7 @@ Text GLabel 9200 4500 2    49   Input ~ 0
 SDRAM_BANK1
 Text GLabel 11650 4800 2    49   Input ~ 0
 SDRAM_CLK
-Text GLabel 9200 4800 2    49   Input ~ 0
+Text GLabel 8350 4900 2    49   Input ~ 0
 SDRAM_CKE
 Text GLabel 11650 4100 2    49   Input ~ 0
 SDRAM_RAS
