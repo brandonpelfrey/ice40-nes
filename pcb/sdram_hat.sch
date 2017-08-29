@@ -1934,23 +1934,23 @@ Text GLabel 10700 4400 2    49   Input ~ 0
 SDRAM_D1
 Text GLabel 11650 4400 2    49   Input ~ 0
 SDRAM_D0
-Text GLabel 9200 4000 2    49   Input ~ 0
+Text GLabel 8350 4000 2    49   Input ~ 0
 QPI_RESET
 Text GLabel 9200 3900 2    49   Input ~ 0
 QPI_RFU
 Text GLabel 6600 4000 2    49   Input ~ 0
 QPI_SCK
-Text GLabel 8350 4000 2    49   Input ~ 0
+Text GLabel 8350 4100 2    49   Input ~ 0
 QPI_VIO
 Text GLabel 8350 3900 2    49   Input ~ 0
 QPI_CS
-Text GLabel 6600 3900 2    49   Input ~ 0
+Text GLabel 9200 4200 2    49   Input ~ 0
 QPI_IO0
 Text GLabel 8350 3700 2    49   Input ~ 0
 QPI_IO1
-Text GLabel 7350 3900 2    49   Input ~ 0
+Text GLabel 9200 4300 2    49   Input ~ 0
 QPI_IO2
-Text GLabel 7350 4000 2    49   Input ~ 0
+Text GLabel 9200 4000 2    49   Input ~ 0
 QPI_IO3
 Text GLabel 11650 3900 2    49   Input ~ 0
 DAC_BCK
