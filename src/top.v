@@ -17,9 +17,11 @@ module top(
 
 // Clock stuff
 wire w_vga_clock;
+wire w_sdram_clock;
 mod_clock_master clock_master(
   .in_clk_12_mhz( in_clk_12_mhz ),
   .out_clk_25_175_mhz( w_vga_clock ),
+  .out_clk_166_mhz( w_sdram_clock ),
 );
 
 // VGA Display Interface
