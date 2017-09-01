@@ -24,3 +24,33 @@ set_io --warn-no-port out_vga_hsync M16
 set_io --warn-no-port out_vga_vsync N16
 #set_io --warn-no-port out_vga_hsync C16
 #set_io --warn-no-port out_vga_vsync B16
+
+# SDRAM - Currently just made up pins
+set_io --warn-no-port out_sdram_cle E4
+set_io --warn-no-port out_sdram_cs F5
+set_io --warn-no-port out_sdram_cas F4
+set_io --warn-no-port out_sdram_ras G5
+set_io --warn-no-port out_sdram_we G4
+set_io --warn-no-port out_sdram_dqm E3
+set_io --warn-no-port out_sdram_ba[0] H5
+set_io --warn-no-port out_sdram_ba[1] G3
+set_io --warn-no-port out_sdram_a[0] F3
+set_io --warn-no-port out_sdram_a[1] H3
+set_io --warn-no-port out_sdram_a[2] H6
+set_io --warn-no-port out_sdram_a[3] H4
+set_io --warn-no-port out_sdram_a[4] J4
+set_io --warn-no-port out_sdram_a[5] J5
+set_io --warn-no-port out_sdram_a[6] L4
+set_io --warn-no-port out_sdram_a[7] K4
+set_io --warn-no-port out_sdram_a[8] L6
+set_io --warn-no-port out_sdram_a[9] K5
+set_io --warn-no-port out_sdram_a[10] L7
+set_io --warn-no-port out_sdram_a[11] M6
+set_io --warn-no-port inout_sdram_dq[0] M3
+set_io --warn-no-port inout_sdram_dq[1] L5
+set_io --warn-no-port inout_sdram_dq[2] M4
+set_io --warn-no-port inout_sdram_dq[3] N4
+set_io --warn-no-port inout_sdram_dq[4] N6
+set_io --warn-no-port inout_sdram_dq[5] P4
+set_io --warn-no-port inout_sdram_dq[6] N5
+set_io --warn-no-port inout_sdram_dq[7] P5

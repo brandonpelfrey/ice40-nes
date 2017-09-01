@@ -12,30 +12,30 @@
 
     Modified to work with an ice40 and IS42S81600F-6TLI sdram.
 */
-module mod_sdram (
-        input sdram_clk,
-        input rst,
+module mod_sdram_controller (
+    input in_sdram_clk,
+    input in_rst,
 
-        // these signals go directly to the IO pins
-        output sdram_cle,
-        output sdram_cs,
-        output sdram_cas,
-        output sdram_ras,
-        output sdram_we,
-        output sdram_dqm,
-        output [1:0] sdram_ba,
-        output [11:0] sdram_a,
-        inout [7:0] sdram_dq,
+    // these signals go directly to the IO pins
+    output out_sdram_cle,
+    output out_sdram_cs,
+    output out_sdram_cas,
+    output out_sdram_ras,
+    output out_sdram_we,
+    output out_sdram_dqm,
+    output [1:0] out_sdram_ba,
+    output [11:0] out_sdram_a,
+    inout [7:0] inout_sdram_dq,
 
-        // User interface
-        input [21:0] addr,      // address to read/write
-        input rw,               // 1 = write, 0 = read
-        input [31:0] data_in,   // data from a read
-        output [31:0] data_out, // data for a write
-        output busy,            // controller is busy when high
-        input in_valid,         // pulse high to initiate a read/write
-        output out_valid        // pulses high when data from read is valid
-    );
+    // User interface
+    input [21:0] in_addr,      // address to read/write
+    input in_rw,               // 1 = write, 0 = read
+    input [31:0] in_data,      // data from a read
+    output [31:0] out_data,    // data for a write
+    output out_busy,           // controller is busy when high
+    input in_valid,            // pulse high to initiate a read/write
+    output out_valid           // pulses high when data from read is valid
+);
 
     // Commands for the SDRAM
     localparam CMD_UNSELECTED    = 4'b1000;
@@ -85,19 +85,32 @@ module mod_sdram (
     (* IOB = "TRUE" *)
     reg [7:0] dq_q;
     (* IOB = "TRUE" *)
-    reg [7:0] dqi_q;
+    wire [7:0] dqi_q;
     reg dq_en_d, dq_en_q;
 
     // Output assignments
-    assign sdram_cle = cle_q;
-    assign sdram_cs = cmd_q[3];
-    assign sdram_ras = cmd_q[2];
-    assign sdram_cas = cmd_q[1];
-    assign sdram_we = cmd_q[0];
-    assign sdram_dqm = dqm_q;
-    assign sdram_ba = ba_q;
-    assign sdram_a = a_q;
-    assign sdram_dq = dq_en_q ? dq_q : 8'hZZ; // only drive when dq_en_q is 1
+    assign out_sdram_cle = cle_q;
+    assign out_sdram_cs = cmd_q[3];
+    assign out_sdram_ras = cmd_q[2];
+    assign out_sdram_cas = cmd_q[1];
+    assign out_sdram_we = cmd_q[0];
+    assign out_sdram_dqm = dqm_q;
+    assign out_sdram_ba = ba_q;
+    assign out_sdram_a = a_q;
+
+    // assign inout_sdram_dq = dq_en_q ? dq_q : 8'hZZ;
+
+    SB_IO #(
+      // The output pin may be tristated using the enable
+      // Simple input pin
+      .PIN_TYPE(6'b 1010_01),
+      .PULLUP(1'b 0)
+    ) data_io [7:0] (
+      .PACKAGE_PIN(inout_sdram_dq),
+      .OUTPUT_ENABLE(dq_en_d), // only drive when dq_en_q is 3
+      .D_OUT_0(dq_q),
+      .D_IN_0(dqi_q)
+    );
 
     reg [STATE_SIZE-1:0] state_d, state_q = INIT;
     reg [STATE_SIZE-1:0] next_state_d, next_state_q;
@@ -106,8 +119,8 @@ module mod_sdram (
     reg [31:0] data_d, data_q;
     reg out_valid_d, out_valid_q;
 
-    assign data_out = data_q;
-    assign busy = !ready_q;
+    assign out_data = data_q;
+    assign out_busy = !ready_q;
     assign out_valid = out_valid_q;
 
     reg [15:0] delay_ctr_d, delay_ctr_q;
@@ -132,7 +145,7 @@ module mod_sdram (
     always @* begin
         // Default values
         dq_d = dq_q;
-        dqi_d = sdram_dq;
+        dqi_d = dqi_q;
         dq_en_d = 1'b0; // normally keep the bus in high-Z
         cle_d = cle_q;
         cmd_d = CMD_NOP; // default to NOP
@@ -175,9 +188,9 @@ module mod_sdram (
         // When the queue is empty we aren't busy and can
         // accept another request.
         if (ready_q && in_valid) begin
-            saved_rw_d = rw;
-            saved_data_d = data_in;
-            saved_addr_d = addr;
+            saved_rw_d = in_rw;
+            saved_data_d = in_data;
+            saved_addr_d = in_addr;
             ready_d = 1'b0;
         end
 
@@ -191,7 +204,7 @@ module mod_sdram (
                 ba_d = 2'b0;
                 cle_d = 1'b1;
                 state_d = WAIT;
-                delay_ctr_d = 16'd10100; // wait for 101us
+                delay_ctr_d = 16'd19000; // wait for 101us
                 next_state_d = PRECHARGE_INIT;
                 dq_en_d = 1'b0;
             end
@@ -360,8 +373,8 @@ module mod_sdram (
 
     end
 
-    always @(posedge sdram_clk) begin
-        if(rst) begin
+    always @(posedge in_sdram_clk) begin
+        if(in_rst) begin
             cle_q <= 1'b0;
             dq_en_q <= 1'b0;
             state_q <= INIT;
@@ -382,7 +395,6 @@ module mod_sdram (
         ba_q <= ba_d;
         a_q <= a_d;
         dq_q <= dq_d;
-        dqi_q <= dqi_d;
 
         next_state_q <= next_state_d;
         refresh_flag_q <= refresh_flag_d;

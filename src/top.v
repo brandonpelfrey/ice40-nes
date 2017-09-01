@@ -12,7 +12,18 @@ module top(
   // Controller 0
   output out_controller0_pulse,
   output out_controller0_latch,
-  input in_controller0_data
+  input in_controller0_data,
+
+  // SDRAM
+  output out_sdram_cle,
+  output out_sdram_cs,
+  output out_sdram_cas,
+  output out_sdram_ras,
+  output out_sdram_we,
+  output out_sdram_dqm,
+  output [1:0] out_sdram_ba,
+  output [11:0] out_sdram_a,
+  inout [7:0] inout_sdram_dq
 );
 
 // Clock stuff
@@ -101,6 +112,33 @@ mod_controller controller0(
   .out_controller_pulse( out_controller0_pulse ),
   .out_controller_buttons( controller0_buttons )
 );
+
+mod_sdram_controller sdram_controller(
+  .in_sdram_clk(w_sdram_clock),
+  .in_rst(1'b0),
+  .out_sdram_cle(out_sdram_cle),
+  .out_sdram_cs(out_sdram_cs),
+  .out_sdram_cas(out_sdram_cas),
+  .out_sdram_ras(out_sdram_ras),
+  .out_sdram_we(out_sdram_we),
+  .out_sdram_dqm(out_sdram_dqm),
+  .out_sdram_ba(out_sdram_ba),
+  .out_sdram_a(out_sdram_a),
+  .inout_sdram_dq(inout_sdram_dq),
+  .in_addr(22'b0000000000001000100100),
+  .in_rw(readOrWrite),
+  .in_data(counter),
+  .out_data(mem_read),
+  .out_busy(busy),
+  .in_valid(start),
+  .out_valid(done)
+);
+
+reg [31:0] mem_read;
+reg readOrWrite = 0;
+wire busy;
+reg start = 0;
+wire done;
 
 // Some internal state, used to update an on-screen counter
 reg [63:0] counter;
